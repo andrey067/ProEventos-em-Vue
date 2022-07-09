@@ -28,3 +28,18 @@ D:\Estudo\FullStack .NET + Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\Pro
 D:\Estudo\FullStack .NET + Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\refint\ProEventos.Services.dll
 D:\Estudo\FullStack .NET + Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.pdb
 D:\Estudo\FullStack .NET + Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ref\ProEventos.Services.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ProEventos.Services.deps.json
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ProEventos.Services.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ref\ProEventos.Services.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ProEventos.Services.pdb
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ProEventos.Domain.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ProEventos.Domain.pdb
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.csproj.AssemblyReference.cache
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.AssemblyInfoInputs.cache
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.AssemblyInfo.cs
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.csproj.CoreCompileInputs.cache
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.csproj.CopyComplete
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ref\ProEventos.Services.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.pdb

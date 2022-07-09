@@ -2,17 +2,24 @@
     <div>
         <h2>Eventos</h2>
         <hr>
-        <form action="" class="form-inline">
+        <div action="" class="form-inline">
             <div class="form-group mb-2">
-                <input type="text" class="form control mr-2" placeholder="buscar">
-                <button class="btn btn-outline-success">Buscar</button>
+                <label for="Filtro" class="mr-2"></label>
+                <input type="text" class="form control mr-2" placeholder="buscar" v-model="search">
+                <button class="btn btn-outline-success" @click="filtrar()">Buscar</button>
             </div>
-        </form>
+        </div>
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
+                    <th>
+                        <button type="button" class="btn btn-light btn-sm" @click="mostrarImagem()">
+                            {{ imagem ?
+                                    'Ocultar' : 'Mostrar'
+                            }}
+                        </button>
+                    </th>
                     <th>#</th>
-                    <!-- <th>Image</th> -->
                     <th>Tema</th>
                     <th>Local</th>
                     <th>Data</th>
@@ -22,15 +29,22 @@
                 </tr>
             </thead>
             <tbody v-if="eventos && eventos.length">
-                <tr v-for="(eveto, index) in eventos" :key="index">
-                    <td>{{ eveto.id }}</td>
-                    <!-- <td>{{ eveto.imagemURL }}</td> -->
-                    <td>{{ eveto.tema }}</td>
-                    <td>{{ eveto.local }}</td>
-                    <td>{{ eveto.dataEvento }}</td>
-                    <td>{{ eveto.qtdPessoas }}</td>
-                    <td>{{ eveto.lotes }}</td>
-                    <td></td>
+                <tr v-for="evento in eventos" :key="evento.id">
+                    <td v-show="imagem">{{ evento.imagemURL }}</td>
+                    <td>{{ evento.id }}</td>
+                    <td>{{ evento.tema }}</td>
+                    <td>{{ evento.local }}</td>
+                    <td>{{ evento.dataEvento }}</td>
+                    <td>{{ evento.qtdPessoas }}</td>
+                    <td>{{ evento.lotes }}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm mr-2">
+                            <i class="fa fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
             <tfoot v-if="!eventos.length">
@@ -40,31 +54,49 @@
                     </td>
                 </tr>
             </tfoot>
-        </table>        
+        </table>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import httpclient from '@/services/HttpClient'
+import { Evento } from "@/models/Evento";
 
 
 export default defineComponent({
     name: "EventosComponent",
+
     data: () => ({
-        eventos: Array<any>()
+        eventos: Array<Evento>(),
+        imagem: false,
+        search: ''
     }),
     created() {
         this.getEventos();
     },
     methods: {
         getEventos(): void {
-            httpclient.get('/Evento')
+            httpclient.get<Array<Evento>>('/Evento')
                 .then((response) => {
                     this.eventos = response.data
-                    console.log(this.eventos)
                 })
+        },
+        mostrarImagem() {
+            this.imagem = !this.imagem
+        },
+        filtrar() {
+            console.log(this.search)
+            this.search = this.search.toLowerCase();
+            this.eventos.filter((evento: Evento) => {
+                evento.tema.toLowerCase().includes(this.search)
+            });
+
+
         }
+    },
+    computed: {
+
     }
 });
 </script>
