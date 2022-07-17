@@ -1539,11 +1539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Api\\ProEventos.Api.csproj",
+      "projectUniqueName": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Api\\ProEventos.Api.csproj",
       "projectName": "ProEventos.Api",
-      "projectPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Api\\ProEventos.Api.csproj",
+      "projectPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Api\\ProEventos.Api.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Api\\obj\\",
+      "outputPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1560,8 +1560,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj": {
-              "projectPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj"
+            "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj": {
+              "projectPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj"
             }
           }
         }

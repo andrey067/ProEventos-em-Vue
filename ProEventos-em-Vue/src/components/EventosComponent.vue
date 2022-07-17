@@ -30,15 +30,17 @@
             </thead>
             <tbody v-if="eventos && eventos.length">
                 <tr v-for="evento in eventos" :key="evento.id">
-                    <td v-show="imagem">{{ evento.imagemURL }}</td>
+                    <td v-show="imagem">
+                        <img :src="evento.imagemURL">
+                    </td>
                     <td>{{ evento.id }}</td>
                     <td>{{ evento.tema }}</td>
                     <td>{{ evento.local }}</td>
-                    <td>{{ evento.dataEvento }}</td>
+                    <td>{{ $filters.price(evento.dataEvento) }}</td>
                     <td>{{ evento.qtdPessoas }}</td>
                     <td>{{ evento.lotes }}</td>
                     <td>
-                        <button type="button" class="btn btn-primary btn-sm mr-2">
+                        <button type="button" class="btn btn-primary btn-sm mr-5">
                             <i class="fa fa-edit"></i>
                         </button>
                         <button type="button" class="btn btn-danger btn-sm">
@@ -60,8 +62,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import httpclient from '@/services/HttpClient'
-import { Evento } from "@/models/Evento";
+import httpclient from '../services/HttpClient'
+import { Evento } from "../models/Evento";
 
 
 export default defineComponent({
@@ -101,5 +103,5 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style scoped lang="css">
 </style>

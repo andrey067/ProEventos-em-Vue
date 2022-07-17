@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l3epfujHexmhukfFSNTxOn1MZCEk6STGKMvw9beGL+wCVuhKT6rOkXm/D76+YSEdn/ZCnbVFdWkmj37gb6ws0Q==",
+  "dgSpecHash": "vrQpRsNM/QmOFm4ssZFh3Y6yd9XLVkwgqsZjJQBS6WwtQv7dZ0TEPMU/oTcEjHH1oVOYROQT7hWCO/u/4b3fiQ==",
   "success": true,
-  "projectFilePath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+  "projectFilePath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\bogus\\34.0.1\\bogus.34.0.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.14\\microsoft.data.sqlite.core.5.0.14.nupkg.sha512",

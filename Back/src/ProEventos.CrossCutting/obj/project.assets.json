@@ -1210,11 +1210,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj",
+      "projectUniqueName": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj",
       "projectName": "ProEventos.CrossCutting",
-      "projectPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj",
+      "projectPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.CrossCutting\\obj\\",
+      "outputPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.CrossCutting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1231,14 +1231,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-              "projectPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+            "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+              "projectPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
             },
-            "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
-              "projectPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+            "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+              "projectPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
             },
-            "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Services\\ProEventos.Services.csproj": {
-              "projectPath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Services\\ProEventos.Services.csproj"
+            "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Services\\ProEventos.Services.csproj": {
+              "projectPath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Services\\ProEventos.Services.csproj"
             }
           }
         }

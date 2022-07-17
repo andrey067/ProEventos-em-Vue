@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uJ+qrZDtvW0lHrlghVGGWzjhLUSymf6sguqL+DczrEgUZnT2fzrhJxh2Bn2avNVSDx0gHRmzqjS79db4/3ek1g==",
+  "dgSpecHash": "VA4YSQlazpfO7r9DP4WlWnZ2GVbrAG+GtGVH2OiD9VSQsUKESp6PwRsMNHpIRbiAC4nq91jebqON+sIY6fgXdg==",
   "success": true,
-  "projectFilePath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Services\\ProEventos.Services.csproj",
+  "projectFilePath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Services\\ProEventos.Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

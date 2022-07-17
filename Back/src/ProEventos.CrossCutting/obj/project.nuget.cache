@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MzcLEIpnaENuy9eCIPmaGS9PG6QwgnYnOSwd6YBZ+zGMazqFrSDq+raH/7wRpeeJWauQljN/5PX3RRWb6NI1mw==",
+  "dgSpecHash": "+eijAsX2cveKGIFhfhfoFf6TwzcoZyWP6iCMkQb87eTDTZGXIuCraHWgCDqPay+ATmnmy02Yk6wqH5SKJaDjcQ==",
   "success": true,
-  "projectFilePath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj",
+  "projectFilePath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.CrossCutting\\ProEventos.CrossCutting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\bogus\\34.0.1\\bogus.34.0.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.14\\microsoft.data.sqlite.core.5.0.14.nupkg.sha512",

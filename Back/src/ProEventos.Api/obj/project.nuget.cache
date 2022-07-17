@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JnXvP2JEZmu2BoI8Mu+Lj8xFCjNilf0Smd05hxchYbYs+Xd3QN78JUDCyWn/ULf9MnHetMw1l/nIWBOZM2y0Jg==",
+  "dgSpecHash": "4KCTUrOuYlWjAUjyqX4+OcDWFkO40MRwuJp5nOFhNBazqqF0I95MtMVVLEMXHWj1IKHONhqCIglmI52p0l87ng==",
   "success": true,
-  "projectFilePath": "E:\\Cursos\\ProEventos-em-Vue\\Back\\src\\ProEventos.Api\\ProEventos.Api.csproj",
+  "projectFilePath": "E:\\Cursos\\FullStack.Net_Angular\\Curso em Vue\\proeventos-app\\Back\\src\\ProEventos.Api\\ProEventos.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\bogus\\34.0.1\\bogus.34.0.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
