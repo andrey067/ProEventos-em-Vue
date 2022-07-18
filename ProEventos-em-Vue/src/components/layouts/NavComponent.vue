@@ -1,34 +1,57 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Pro Eventos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Palestrantes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contatos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <MDBNavbar expand="lg" light bg="light" container>
+        <MDBNavbarBrand to="/">Pro Eventos</MDBNavbarBrand>
+        <MDBNavbarToggler @click="collapse1 = !collapse1" target="#navbarSupportedContent"></MDBNavbarToggler>
+        <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
+            <MDBNavbarNav class="mb-2 mb-lg-0">
+                <MDBNavbarItem to="/">
+                    Eventos
+                </MDBNavbarItem>
+                <MDBNavbarItem to="/palestrantes">
+                    Palestrantes
+                </MDBNavbarItem>
+                <MDBNavbarItem>
+                    <!-- Navbar dropdown -->
+                    <MDBDropdown class="nav-item" v-model="dropdown1">
+                        <MDBDropdownToggle tag="a" class="nav-link" @click="dropdown1 = !dropdown1">Dropdown
+                        </MDBDropdownToggle>
+                        <MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+                            <MDBDropdownItem href="#">Action</MDBDropdownItem>
+                            <MDBDropdownItem href="#">Another Action</MDBDropdownItem>
+                            <MDBDropdownItem href="#">Something else here</MDBDropdownItem>
+                        </MDBDropdownMenu>
+                    </MDBDropdown>
+                </MDBNavbarItem>
+            </MDBNavbarNav>
+            <!-- Search form -->
+            <form class="d-flex input-group w-auto">
+                <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+                <MDBBtn outline="primary">
+                    Search
+                </MDBBtn>
+            </form>
+        </MDBCollapse>
+    </MDBNavbar>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "@vue/runtime-core";
+<script setup lang="ts">
+import {
+    MDBBtn,
+    MDBNavbar,
+    MDBNavbarToggler,
+    MDBNavbarBrand,
+    MDBNavbarNav,
+    MDBNavbarItem,
+    MDBCollapse,
+    MDBDropdown,
+    MDBDropdownToggle,
+    MDBDropdownMenu,
+    MDBDropdownItem
+} from 'mdb-vue-ui-kit';
+import { ref } from 'vue';
 
-export default defineComponent({
-    name: "NavComponent"
-})
+const collapse1 = ref(false);
+const dropdown1 = ref(false);
 </script>
 
 <style>

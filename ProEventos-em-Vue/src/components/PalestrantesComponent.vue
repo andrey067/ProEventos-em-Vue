@@ -1,15 +1,12 @@
 <template>
-  <div class="container">
-    <h1>Palestrantes</h1>
-  </div>
+    <div class="container">
+        <h1>Palestrantes</h1>
+    </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 
-export default defineComponent({
-  name: "PalestrantesComponent",
-});
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

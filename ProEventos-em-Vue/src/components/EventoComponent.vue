@@ -1,24 +1,11 @@
 <template>
-    <div>
+    <LoadingComponenet :show="loading" />
+    <div v-show="!loading">
         <h2>Eventos</h2>
         <hr>
-        <div action="" class="form-inline">
-            <div class="form-group mb-2">
-                <label for="Filtro" class="mr-2"></label>
-                <input type="text" class="form control mr-2" placeholder="buscar" v-model="search">
-                <button class="btn btn-outline-success" @click="filtrar()">Buscar</button>
-            </div>
-        </div>
-        <table class="table table-striped">
-            <thead class="thead-dark">
+        <MDBTable class="align-middle mb-0 bg-white">
+            <thead class="bg-light">
                 <tr>
-                    <th>
-                        <button type="button" class="btn btn-light btn-sm" @click="mostrarImagem()">
-                            {{ imagem ?
-                                    'Ocultar' : 'Mostrar'
-                            }}
-                        </button>
-                    </th>
                     <th>#</th>
                     <th>Tema</th>
                     <th>Local</th>
@@ -40,12 +27,16 @@
                     <td>{{ evento.qtdPessoas }}</td>
                     <td>{{ evento.lotes }}</td>
                     <td>
-                        <b-button v-b-tooltip.hover title="Editar" variant="primary" size="sm">
-                            <i class="fa fa-edit"></i>
-                        </b-button>
-                        <b-button v-b-tooltip.hover title="Excluir" variant="danger" size="sm" class="m-2">
-                            <i class="fa fa-trash"></i>
-                        </b-button>
+                        <Popper content="Editar" hover="true" placement="top-start">
+                            <button type="button" class="btn btn-primary btn-sm mr-5">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                        </Popper>
+                        <Popper content="Excluir" hover="true" placement="top-start">
+                            <button type="button" class="btn btn-danger btn-sm">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </Popper>                        
                     </td>
                 </tr>
             </tbody>
@@ -56,27 +47,25 @@
                     </td>
                 </tr>
             </tfoot>
-        </table>
-    </div>
-
-    <div>
-        <b-button @click="makeToast()">Open Modal</b-button>
-        <b-modal v-model="modalShow">Hello From Modal!</b-modal>
+        </MDBTable>
     </div>
 </template>
 
 <script setup lang="ts">
+import { MDBTable, MDBTooltip, MDBBtn } from 'mdb-vue-ui-kit';
 import { getCurrentInstance } from 'vue'
 import { ref } from "@vue/reactivity";
-import { Evento } from "@/models/Evento";
+import { Evento } from "../models/Evento";
 import httpclient from "../services/httpclient";
 import { onMounted } from "@vue/runtime-core";
 import { POSITION, useToast } from "vue-toastification";
+import LoadingComponenet from '../components/layouts/LoadingComponenet.vue'
 
 
 onMounted(() => {
     getEventos();
 })
+
 
 const eventos = ref<Evento[]>([])
 const imagem = ref(false);
@@ -85,17 +74,25 @@ const internalInstance = getCurrentInstance();
 const pipe = internalInstance?.appContext.config.globalProperties.$filters;
 const modalShow = ref(false);
 const toast = useToast();
+const loading = ref(true)
+
 
 function getEventos(): void {
-
     httpclient.get<Array<Evento>>('/Evento')
         .then((response) => {
             eventos.value = response.data
-        }).finally(() => console.log(""))
+        }).finally(() => loading.value = false)
+        .catch((error) => {
+            toast.error("Erro ao carregar os Eventos")
+        })
 }
 
 function mostrarImagem() {
     imagem.value = !imagem.value
+}
+
+function showPopper() {
+    console.log("houver")
 }
 
 function filtrar() {

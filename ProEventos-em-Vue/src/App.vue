@@ -1,26 +1,14 @@
 <template>
-  <div class="container">
-    <nav-component />
-    <eventos-component />
-    <!-- <palestrantes-component /> -->
-  </div>
+  <NavComponent />
+  <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import EventosComponent from "./components/EventosComponent.vue";
-import NavComponent from "./components/layouts/NavComponent.vue";
-// import PalestrantesComponent from "./components/PalestrantesComponent.vue";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    EventosComponent,
-    // PalestrantesComponent,
-    NavComponent
-  },
-});
+<script setup lang="ts">
+import NavComponent from './components/layouts/NavComponent.vue';
 </script>
 
 <style>
+#app {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
 </style>
