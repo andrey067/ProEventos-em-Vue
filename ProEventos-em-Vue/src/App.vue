@@ -11,4 +11,7 @@ import NavComponent from './components/layouts/NavComponent.vue';
 #app {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+body{
+  background: #f8f9fa;
+}
 </style>

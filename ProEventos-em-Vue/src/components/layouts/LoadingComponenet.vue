@@ -7,7 +7,16 @@
 <script setup lang="ts">
 import { MDBSpinner } from "mdb-vue-ui-kit";
 defineProps({
-    show: Boolean
+    show: Boolean,
+    titulo: String,
+    subtitulo: {
+        type:String,
+        default: 'Desde 2021'
+    },
+    iconClass: {
+        type:String,
+        default: 'fa fa-user'
+    }
 })
 
 </script>

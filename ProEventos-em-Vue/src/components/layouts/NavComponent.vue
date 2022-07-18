@@ -1,5 +1,5 @@
 <template>
-    <MDBNavbar expand="lg" light bg="light" container>
+    <MDBNavbar expand="lg" light bg="white" container class="shadow-5">
         <MDBNavbarBrand to="/">Pro Eventos</MDBNavbarBrand>
         <MDBNavbarToggler @click="collapse1 = !collapse1" target="#navbarSupportedContent"></MDBNavbarToggler>
         <MDBCollapse v-model="collapse1" id="navbarSupportedContent">

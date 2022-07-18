@@ -3,7 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import PalestrantesComponent from "../components/PalestrantesComponent.vue";
 
 
-const routes: RouteRecordRaw[] = [
+const routes: RouteRecordRaw[] = [      
     {
         path: '/',
         component: EventoComponent,
@@ -11,7 +11,8 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/palestrantes',
         component: PalestrantesComponent
-    }
+    },
+    { path: '/:catchAll(.*)*', redirect: '/' }
 ]
 
 
