@@ -1,5 +1,8 @@
 <template>
-    <!-- <div class="card rounded shadow-5 p-3">
+    <TituloComponent :titulo="dadosTitulo.titulo" :subtitulo="dadosTitulo.subtitulo" :icon-class="dadosTitulo.iconClass"
+        :botao-listar="true" />
+    <LoadingComponenet :show="loading" />
+    <div class="card rounded shadow-5 p-3">
         <div v-show="!loading">
             <h2>Eventos</h2>
             <hr>
@@ -15,10 +18,10 @@
 
                 </div>
                 <div>
-                    <a class="d-flex btn btn-outline-primary">
+                    <router-link type="button" to="/eventos/detalhes" class="d-flex btn btn-outline-primary">
                         <i class="fa fa-plus-circle my-1"></i>
                         <b class="ml-1 d-none d-sm-block">Novo Evento</b>
-                    </a>
+                    </router-link>
                 </div>
             </div>
 
@@ -37,7 +40,8 @@
                     </tr>
                 </thead>
                 <tbody v-if="eventos && eventos.length">
-                    <tr v-for="evento in eventos" :key="evento.id">
+                    <tr v-for="evento in eventos" :key="evento.id" style="cursor:pointer;"
+                        @click="detalheEventos(evento.id)">
                         <td v-show="imagem">
                             <img :src="evento.imagemURL">
                         </td>
@@ -48,16 +52,11 @@
                         <td>{{ evento.qtdPessoas }}</td>
                         <td>{{ evento.lotes }}</td>
                         <td>
-                            <Popper content="Editar" hover placement="top-start">
-                                <button type="button" class="btn btn-primary btn-sm mr-5">
-                                    <i class="fa fa-edit"></i>
-                                </button>
-                            </Popper>
                             <Popper content="Excluir" hover placement="top-start">
                                 <button type="button" class="btn btn-danger btn-sm">
                                     <i class="fa fa-trash"></i>
                                 </button>
-                            </Popper>
+                            </Popper>                           
                         </td>
                     </tr>
                 </tbody>
@@ -70,11 +69,92 @@
                 </tfoot>
             </MDBTable>
         </div>
-    </div> -->
+    </div>
+    <router-view></router-view>
 </template>
 
 <script setup lang="ts">
+import { MDBTable } from 'mdb-vue-ui-kit';
+import { getCurrentInstance } from 'vue'
+import { ref } from "@vue/reactivity";
+import { Evento } from "../../models/Evento";
+import httpclient from "../../services/httpclient";
+import { onMounted } from "@vue/runtime-core";
+import { POSITION, useToast } from "vue-toastification";
+import LoadingComponenet from '../../components/layouts/LoadingComponenet.vue'
+import { Titulo } from '../../interfaces/Titulo';
+import TituloComponent from '../layouts/TituloComponent.vue';
+import { useRouter } from 'vue-router';
 
+
+onMounted(() => {
+    getEventos();
+})
+
+const dadosTitulo: Titulo = {
+    titulo: "Eventos",
+    subtitulo: "subtitulo Eventos",
+    iconClass: "fa-calendar",
+}
+const eventos = ref<Evento[]>([])
+const imagem = ref(false);
+const search = ref('');
+const internalInstance = getCurrentInstance();
+const pipe = internalInstance?.appContext.config.globalProperties.$filters;
+const modalShow = ref(false);
+const toast = useToast();
+const loading = ref(true);
+const router = useRouter()
+
+
+function getEventos(): void {
+    httpclient.get<Array<Evento>>('/Evento')
+        .then((response) => {
+            console.log(response.data)
+            eventos.value = response.data
+        }).finally(() => loading.value = false)
+        .catch((error) => {
+            toast.error("Erro ao carregar os Eventos")
+        })
+}
+
+function mostrarImagem() {
+    imagem.value = !imagem.value
+}
+
+function filtrar() {
+    console.log(search.value)
+    search.value = search.value.toLowerCase();
+    eventos.value.filter((evento: Evento) => {
+        console.log(evento)
+        evento.tema.toLowerCase().includes(search.value)
+    });
+}
+
+function mostarModal() {
+    modalShow.value = !modalShow.value
+}
+
+function makeToast() {
+    toast.success("I'm an info toast!", {
+        position: POSITION.BOTTOM_RIGHT,
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        rtl: false
+    });
+}
+
+
+function detalheEventos(eventoid: number) {    
+    router.push(`/eventos/detalhes/${eventoid}`)
+}
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
     <div v-if="show" class="d-flex justify-content-center">
-        <MDBSpinner />
+        <!-- <MDBSpinner /> -->
     </div>
 </template>
 

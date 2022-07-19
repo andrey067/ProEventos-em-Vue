@@ -1,53 +1,69 @@
 <template>
-    <MDBNavbar expand="lg" light bg="white" container class="shadow-5">
-        <MDBNavbarBrand to="/">Pro Eventos</MDBNavbarBrand>
-        <MDBNavbarToggler @click="collapse1 = !collapse1" target="#navbarSupportedContent"></MDBNavbarToggler>
-        <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
-            <MDBNavbarNav class="mb-2 mb-lg-0">
-                <MDBNavbarItem to="/">
-                    Eventos
-                </MDBNavbarItem>
-                <MDBNavbarItem to="/palestrantes">
-                    Palestrantes
-                </MDBNavbarItem>
-                <MDBNavbarItem>
-                    <!-- Navbar dropdown -->
-                    <MDBDropdown class="nav-item" v-model="dropdown1">
-                        <MDBDropdownToggle tag="a" class="nav-link" @click="dropdown1 = !dropdown1">Dropdown
-                        </MDBDropdownToggle>
-                        <MDBDropdownMenu aria-labelledby="dropdownMenuButton">
-                            <MDBDropdownItem href="#">Action</MDBDropdownItem>
-                            <MDBDropdownItem href="#">Another Action</MDBDropdownItem>
-                            <MDBDropdownItem href="#">Something else here</MDBDropdownItem>
-                        </MDBDropdownMenu>
-                    </MDBDropdown>
-                </MDBNavbarItem>
-            </MDBNavbarNav>
-            <!-- Search form -->
-            <form class="d-flex input-group w-auto">
-                <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
-                <MDBBtn outline="primary">
-                    Search
-                </MDBBtn>
-            </form>
-        </MDBCollapse>
-    </MDBNavbar>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Documentation
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Jobs
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 </template>
 
 <script setup lang="ts">
-import {
-    MDBBtn,
-    MDBNavbar,
-    MDBNavbarToggler,
-    MDBNavbarBrand,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBCollapse,
-    MDBDropdown,
-    MDBDropdownToggle,
-    MDBDropdownMenu,
-    MDBDropdownItem
-} from 'mdb-vue-ui-kit';
+
 import { ref } from 'vue';
 
 const collapse1 = ref(false);

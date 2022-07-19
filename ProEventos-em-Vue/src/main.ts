@@ -1,12 +1,11 @@
 import { createApp } from 'vue'
-// import './style.css'
+import './style.css'
+// import './assets/css/bulma.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import App from './App.vue'
 import filters from './helpers/filters';
-import '@popperjs/core';
 import "vue-toastification/dist/index.css";
 import Toast from "vue-toastification";
-import 'mdb-vue-ui-kit/css/mdb.min.css';
 import router from './router/index';
 import Popper from "vue3-popper";
 
