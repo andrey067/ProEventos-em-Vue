@@ -24,7 +24,7 @@
 
 "@vitejs/plugin-vue@^3.0.1":
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.0.1.tgz#b6af8f782485374bbb5fe09edf067a845bf4caae"
+  resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-3.0.1.tgz"
   integrity sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==
 
 "@volar/code-gen@0.38.7":
@@ -105,7 +105,7 @@
 
 "@vue/devtools-api@^6.1.4":
   version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.2.1.tgz#6f2948ff002ec46df01420dfeff91de16c5b4092"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.2.1.tgz"
   integrity sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==
 
 "@vue/reactivity-transform@3.2.37":
@@ -316,7 +316,7 @@ csstype@^2.6.8:
 
 debounce@^1.2.1:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
+  resolved "https://registry.npmjs.org/debounce/-/debounce-1.2.1.tgz"
   integrity sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==
 
 delayed-stream@~1.0.0:
@@ -656,7 +656,7 @@ json5@^1.0.1:
 
 json5@^2.2.1:
   version "2.2.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.1.tgz#655d50ed1e6f95ad1a3caababd2b0efda10b395c"
+  resolved "https://registry.npmjs.org/json5/-/json5-2.2.1.tgz"
   integrity sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==
 
 jsonfile@^6.0.1:
@@ -935,7 +935,7 @@ strip-ansi@^6.0.0, strip-ansi@^6.0.1:
 
 strip-bom@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
+  resolved "https://registry.npmjs.org/strip-bom/-/strip-bom-3.0.0.tgz"
   integrity sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==
 
 supports-color@^7.1.0:
@@ -971,7 +971,7 @@ to-regex-range@^5.0.1:
 
 tsconfig-paths@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-4.0.0.tgz#1082f5d99fd127b72397eef4809e4dd06d229b64"
+  resolved "https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-4.0.0.tgz"
   integrity sha512-SLBg2GBKlR6bVtMgJJlud/o3waplKtL7skmLkExomIiaAtLGtVsoXIqP3SYdjbcH9lq/KVv7pMZeCBpLYOit6Q==
   dependencies:
     json5 "^2.2.1"
@@ -1020,7 +1020,7 @@ vue-cli-plugin-mdb5@~1.2.0:
 
 vue-router@4:
   version "4.1.2"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.1.2.tgz#ae08f63c9610afa6bff6743e8f128b7054d4c9f5"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.1.2.tgz"
   integrity sha512-5BP1qXFncVRwgV/XnqzsKApdMjQPqWIpoUBdL1ynz8HyLxIX/UDAx7Ql2BjmA5CXT/p61JfZvkpiFWFpaqcfag==
   dependencies:
     "@vue/devtools-api" "^6.1.4"
@@ -1039,7 +1039,7 @@ vue-tsc@^0.38.4:
 
 vue3-popper@^1.5.0:
   version "1.5.0"
-  resolved "https://registry.yarnpkg.com/vue3-popper/-/vue3-popper-1.5.0.tgz#eeac767e1011942fe1737e8299a832b530c0a997"
+  resolved "https://registry.npmjs.org/vue3-popper/-/vue3-popper-1.5.0.tgz"
   integrity sha512-xaEnx90YBnlSg5G2yWqm2DHWHg+DB99UVRp4VsyTF0QLXyHrqSuE1Xo5+sG0AQq/lBcrGMlk5NU5xE2MDLKViw==
   dependencies:
     "@popperjs/core" "^2.9.2"

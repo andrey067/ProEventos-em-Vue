@@ -1,6 +1,4 @@
 <template>
-    <TituloComponent titulo="Eventos" subtitulo="Cadastre aqui seus Eventos" iconClass="fa fa-calendar"
-        :botaoListar="true" />
     <LoadingComponenet :show="loading" />
     <div class="card rounded shadow-5 p-3">
         <div v-show="!loading">
@@ -29,9 +27,10 @@
             <MDBTable class="align-middle mb-0 bg-white">
                 <thead class="bg-light">
                     <tr>
+                        <th v-show="imagem">Imagem</th>
                         <th>#</th>
                         <th>Tema</th>
-                        <th>Local</th>
+                        <th class="d-none d-md-table-cell">Local</th>
                         <th>Data</th>
                         <th>Quantidade Pessoas</th>
                         <th>Lote</th>
@@ -45,7 +44,7 @@
                         </td>
                         <td>{{ evento.id }}</td>
                         <td>{{ evento.tema }}</td>
-                        <td>{{ evento.local }}</td>
+                        <td class="d-none d-md-table-cell">{{ evento.local }}</td>
                         <td>{{ pipe.format_date(evento.dataEvento) }}</td>
                         <td>{{ evento.qtdPessoas }}</td>
                         <td>{{ evento.lotes }}</td>
@@ -79,16 +78,25 @@
 import { MDBTable } from 'mdb-vue-ui-kit';
 import { getCurrentInstance } from 'vue'
 import { ref } from "@vue/reactivity";
-import { Evento } from "../models/Evento";
-import httpclient from "../services/httpclient";
-import { onMounted } from "@vue/runtime-core";
+import { Evento } from "../../models/Evento";
+import httpclient from "../../services/httpclient";
+import { computed, onMounted } from "@vue/runtime-core";
 import { POSITION, useToast } from "vue-toastification";
-import LoadingComponenet from '../components/layouts/LoadingComponenet.vue'
-import TituloComponent from './layouts/TituloComponent.vue';
+import LoadingComponenet from '../../components/layouts/LoadingComponenet.vue'
+import { Titulo } from '../../interfaces/Titulo';
+const emit = defineEmits(['dadosTitulo']);
+
+const dadosTitulo: Titulo = {
+    titulo: "Eventos",
+    subtitulo: "subtitulo Eventos",
+    iconClass: "fa-calendar-alt",
+}
 
 onMounted(() => {
+    setarTitulo()
     getEventos();
 })
+
 
 const eventos = ref<Evento[]>([])
 const imagem = ref(false);
@@ -115,8 +123,8 @@ function mostrarImagem() {
     imagem.value = !imagem.value
 }
 
-function showPopper() {
-    console.log("houver")
+function setarTitulo() {
+    emit('dadosTitulo', dadosTitulo)
 }
 
 function filtrar() {

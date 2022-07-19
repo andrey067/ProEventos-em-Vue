@@ -1,9 +1,9 @@
-import EventoComponent from "../components/EventoComponent.vue";
+import EventoComponent from "../components/eventos/EventoComponent.vue";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import PalestrantesComponent from "../components/PalestrantesComponent.vue";
+import PalestrantesComponent from "../components/palestrantes/PalestrantesComponent.vue";
 
 
-const routes: RouteRecordRaw[] = [      
+const routes: RouteRecordRaw[] = [
     {
         path: '/',
         component: EventoComponent,
