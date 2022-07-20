@@ -2,23 +2,25 @@
     <TituloComponent :titulo="dadosTitulo.titulo" :subtitulo="dadosTitulo.subtitulo" :icon-class="dadosTitulo.iconClass"
         :botao-listar="true" />
     <LoadingComponenet :show="loading" />
-    <div class="card rounded shadow-5 p-3">
+    <div class="card rounded  p-3">
         <div v-show="!loading">
-            <h2>Eventos</h2>
-            <hr>
-            <div class="d-flex">
-                <div class="flex-fill pr-3">
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">Filtro:</div>
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p class="control">
+                        <span  class="tag is-large">
+                            Filtro:
+                        </span>
+                        </p>
+                        <div class="field has-addons">
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Buscar Evento">
+                            </p>
                         </div>
-                        <input type="text" class="form-control" placeholder="buscar">
                     </div>
-
                 </div>
                 <div>
-                    <router-link type="button" to="/eventos/detalhes" class="d-flex btn btn-outline-primary">
+                    <router-link type="button" to="/eventos/detalhes" class="level-item button is-primary">
                         <i class="fa fa-plus-circle my-1"></i>
                         <b class="ml-1 d-none d-sm-block">Novo Evento</b>
                     </router-link>
@@ -26,9 +28,9 @@
             </div>
 
 
-            <MDBTable class="align-middle mb-0 bg-white">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
                 <thead class="bg-light">
-                    <tr>
+                    <tr class="">
                         <th v-show="imagem">Imagem</th>
                         <th>#</th>
                         <th>Tema</th>
@@ -52,11 +54,11 @@
                         <td>{{ evento.qtdPessoas }}</td>
                         <td>{{ evento.lotes }}</td>
                         <td>
-                            <Popper content="Excluir" hover placement="top-start">
-                                <button type="button" class="btn btn-danger btn-sm">
+                            <Popper content="Excluir" hover placement="right">
+                                <button class="button is-danger is-small">
                                     <i class="fa fa-trash"></i>
                                 </button>
-                            </Popper>                           
+                            </Popper>
                         </td>
                     </tr>
                 </tbody>
@@ -67,14 +69,13 @@
                         </td>
                     </tr>
                 </tfoot>
-            </MDBTable>
+            </table>
         </div>
     </div>
     <router-view></router-view>
 </template>
 
 <script setup lang="ts">
-import { MDBTable } from 'mdb-vue-ui-kit';
 import { getCurrentInstance } from 'vue'
 import { ref } from "@vue/reactivity";
 import { Evento } from "../../models/Evento";
@@ -93,7 +94,7 @@ onMounted(() => {
 
 const dadosTitulo: Titulo = {
     titulo: "Eventos",
-    subtitulo: "subtitulo Eventos",
+    subtitulo: "Lista de Eventos",
     iconClass: "fa-calendar",
 }
 const eventos = ref<Evento[]>([])
@@ -152,7 +153,7 @@ function makeToast() {
 }
 
 
-function detalheEventos(eventoid: number) {    
+function detalheEventos(eventoid: number) {
     router.push(`/eventos/detalhes/${eventoid}`)
 }
 </script>

@@ -1,29 +1,21 @@
 <template>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+            <a class="navbar-item" to="/eventos/lista">
+                <i class="fa fa-users mb-2"></i>
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
-                    Home
-                </a>
+                <router-link class="navbar-item" to="/eventos/lista">
+                    Eventos
+                </router-link>
+                <router-link class="navbar-item" to="/palestrantes">
+                    Palestrantes
+                </router-link>
 
-                <a class="navbar-item">
-                    Documentation
-                </a>
-
-                <div class="navbar-item has-dropdown is-hoverable">
+                <!-- <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         More
                     </a>
@@ -43,7 +35,7 @@
                             Report an issue
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="navbar-end">
