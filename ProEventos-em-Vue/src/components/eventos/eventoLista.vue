@@ -8,9 +8,9 @@
                 <div class="level-left">
                     <div class="level-item">
                         <p class="control">
-                        <span  class="tag is-large">
-                            Filtro:
-                        </span>
+                            <span class="tag is-large">
+                                Filtro:
+                            </span>
                         </p>
                         <div class="field has-addons">
                             <p class="control">
@@ -119,7 +119,7 @@ function getEventos(): void {
         })
 }
 
-function mostrarImagem() {
+function mostrarImagem(): void {
     imagem.value = !imagem.value
 }
 

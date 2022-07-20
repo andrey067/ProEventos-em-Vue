@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar level" role="navigation" aria-label="main navigation" v-if="mostarNav">
         <div class="navbar-brand">
             <a class="navbar-item" to="/eventos/lista">
                 <i class="fa fa-users mb-2"></i>
@@ -14,31 +14,32 @@
                 <router-link class="navbar-item" to="/palestrantes">
                     Palestrantes
                 </router-link>
-
-                <!-- <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        More
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            About
-                        </a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
-                        <a class="navbar-item">
-                            Contact
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
-                        </a>
-                    </div>
-                </div> -->
             </div>
 
-            <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Usuario
+                </a>
+
+                <div class="navbar-dropdown">
+                    <router-link to="/user/perfil" class="navbar-item">
+                        Perfil
+                    </router-link>
+                    <!-- <a class="navbar-item">
+                        Jobs
+                    </a> -->
+                    <!-- <a class="navbar-item">
+                        Contact
+                    </a> -->
+                    <hr class="navbar-divider">
+                    <router-link to="/user/registro" class="navbar-item">
+                        Sair
+                    </router-link>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
                         <a class="button is-primary">
@@ -49,17 +50,27 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
     </nav>
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue';
+import { useRouter } from 'vue-router';
 
-import { ref } from 'vue';
+const router = useRouter();
+const mostarNav = ref(false);
 
-const collapse1 = ref(false);
-const dropdown1 = ref(false);
+watch(() => router.currentRoute.value.fullPath, (firt, second) => {
+    mostrarNav(firt);
+})
+function mostrarNav(fullPath: String) {
+    console.log(fullPath)
+    if (fullPath !== '/user/login')
+        return mostarNav.value = true;
+    else mostarNav.value = false;
+}
+
 </script>
 
 <style>
