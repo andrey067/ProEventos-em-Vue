@@ -7,6 +7,7 @@ import UserComponent from "../components/users/UserComponent.vue";
 import LoginComponent from "../components/users/login/LoginComponent.vue";
 import RegistroComponent from "../components/users/registro/RegistroComponent.vue";
 import PerfilComponent from "../components/users/perfil/PerfilComponent.vue";
+import CadastrarEvento from "../components/eventos/CadastrarEvento.vue";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -32,6 +33,10 @@ const routes: RouteRecordRaw[] = [
         component: EventoComponent,
         redirect: '/eventos/lista',
         children: [
+            {
+                path: 'cadastrar',
+                component: CadastrarEvento
+            },
             {
                 path: 'detalhes',
                 component: DetalhesEvento

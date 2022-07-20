@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div>
-                    <router-link type="button" to="/eventos/detalhes" class="level-item button is-primary">
+                    <router-link type="button" to="/eventos/cadastrar" class="level-item button is-primary">
                         <i class="fa fa-plus-circle my-1"></i>
                         <b class="ml-1 d-none d-sm-block">Novo Evento</b>
                     </router-link>

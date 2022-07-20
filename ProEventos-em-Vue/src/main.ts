@@ -8,7 +8,6 @@ import Toast from "vue-toastification";
 import router from './router/index';
 import Popper from "vue3-popper";
 
-
 const app = createApp(App);
 app.component("Popper", Popper);
 app.use(Toast, {
