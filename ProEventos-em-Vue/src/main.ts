@@ -7,6 +7,9 @@ import "vue-toastification/dist/index.css";
 import Toast from "vue-toastification";
 import router from './router/index';
 import Popper from "vue3-popper";
+import VueFlatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+
 
 const app = createApp(App);
 app.component("Popper", Popper);
@@ -17,4 +20,5 @@ app.use(Toast, {
 });
 app.config.globalProperties.$filters = filters;
 app.use(router);
+app.use(VueFlatPickr);
 app.mount("#app");

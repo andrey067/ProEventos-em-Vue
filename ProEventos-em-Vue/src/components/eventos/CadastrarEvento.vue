@@ -1,39 +1,15 @@
-<template>
-    <div class="card m-6 p-5  is-full">
-        <div class="container">
-            <form>
+<template class="columns">
+    <div class="box is-full">
+        <div class="card p-6">
+            <form class="">
                 <div>
-                    <!-- <div class="columns is-four-fifths">
-                        <div class="column is-3">
-                            <label class="label">Titulo</label>
-                            <div class="select control">
-                                <select>
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <label class="label" for="firstName">Primeiro Nome</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="First Name" name="firstName" />
-                            </div>
-                        </div>
-                        <div class="column">
-                            <label class="label" for="lastName">Ultimo Nome</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Last Name" name="lastName" />
-                            </div>
-                        </div>
-                    </div> -->
-
                     <label class="label" for="username">Tema</label>
                     <div class="control has-icons">
                         <input class="input" type="text" placeholder="Insira o Tema" />
                         <span class="icon is-left"><i class="fa"></i></span>
                     </div>
                     <div class="columns is-four-fifths">
-                        <div class="column is-5">
+                        <div class="column is-9">
                             <label class="label">Local</label>
                             <input class="input" type="text" placeholder="Email" name="firstName" />
                         </div>
@@ -41,9 +17,10 @@
                             <label class="label" for="firstName">Telefone</label>
                             <div class="control">
                                 <div>
-                                    <datepicker placeholder="European Format ('d-m-Y')"
-                                        :config="{ dateFormat: 'd-m-Y', static: true }"></datepicker>
-
+                                    <span class="icon">
+                                        <i class="fas fa-calendar"></i>
+                                    </span>
+                                    <flat-pickr class="button" :config="config" v-model="dataEvento"></flat-pickr>
                                 </div>
                             </div>
                         </div>
@@ -61,24 +38,50 @@
                                         class="fa"></i></span></div>
                         </div>
                     </div>
-
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <router-link to="/user/login" class="button is-primary is-medium" type="submit"> Salvar
-                                Alteração</router-link>
+                    <div class="columns">
+                        <div class="column is-1"><label class="label" for="password">Qtd Pessoas</label>
+                            <div class="control has-icons">
+                                <input class="input" type="number" name="password" />
+                                <span class="icon is-left"><i class="fa"></i></span>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label class="label" for="retypePassword">Telefone</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="number" name="retypePassword" />
+                                <span class="icon is-left"><i class="fa"></i></span>
+                            </div>
+                        </div>
+                        <div class="column"><label class="label" for="retypePassword">Email</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="email" name="retypePassword" />
+                                <span class="icon is-left"><i class="fa"></i></span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </form>
+        </div>
+        <div class="card-footer m-5 ">
+            <div class="field is-grouped ">
+                <div class="control  ">
+                    <button class="button is-medium is-info"> Cancelar</button>
+                    <router-link to="/user/login" class="button is-primary is-medium" type="submit"> Salvar Alteração
+                    </router-link>
+                </div>
+            </div>
         </div>
     </div>
 
 </template>
 
 <script setup lang="ts">
-
-
-
+import { reactive, ref } from "vue";
+const dataEvento = ref<Date>(new Date());
+const config = reactive({
+    dateFormat: 'd-m-Y'
+})
 </script>
 
 <style lang="scss">

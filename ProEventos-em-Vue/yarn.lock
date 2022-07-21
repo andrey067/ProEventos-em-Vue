@@ -594,10 +594,10 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-flatpickr@2.6.3:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-2.6.3.tgz#457357532deb135f3da64b425bf4435737961564"
-  integrity sha512-+Mm/LJPFoAGwjZ+Ash4+IMIYMGelEJnspSu1+USuPV9stv51F+/C8wo3SKE7CRco+jKgZe3rsI7/87msCh/QkQ==
+flatpickr@^4.6.9:
+  version "4.6.13"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.13.tgz#8a029548187fd6e0d670908471e43abe9ad18d94"
+  integrity sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==
 
 follow-redirects@^1.14.9:
   version "1.15.1"
@@ -1289,14 +1289,6 @@ vite@^3.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vue-bulma-datepicker@^1.3.6:
-  version "1.3.6"
-  resolved "https://registry.yarnpkg.com/vue-bulma-datepicker/-/vue-bulma-datepicker-1.3.6.tgz#eae3fd52b39b9816d5e2b45bc63724dc6468c65d"
-  integrity sha512-Je52A06f/SzdSdJYiEy0u7qM6MK7hTY/F8U7+j3JL/nwsMeVKxrC+GMcD+i56sGvzDq66OddYsG492epVASPDw==
-  dependencies:
-    flatpickr "2.6.3"
-    vue-click-outside "1.0.6"
-
 vue-cli-plugin-mdb5@~1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/vue-cli-plugin-mdb5/-/vue-cli-plugin-mdb5-1.2.0.tgz"
@@ -1308,10 +1300,12 @@ vue-cli-plugin-mdb5@~1.2.0:
     replace-in-file "^6.1.0"
     tar "^6.0.5"
 
-vue-click-outside@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/vue-click-outside/-/vue-click-outside-1.0.6.tgz#bf3e0217210d7778299cc39ddcf89cc036089f22"
-  integrity sha512-oiqNzfjOOaMGWc9JUKTVnS8mbdk0ETDcIjKVCBF7Dvgn7QYA03fF2StXIYJuBXx7quQb/rc9xyeeQ7AF0kGDTQ==
+vue-flatpickr-component@9:
+  version "9.0.6"
+  resolved "https://registry.yarnpkg.com/vue-flatpickr-component/-/vue-flatpickr-component-9.0.6.tgz#2aeff6933fc2cd40fe4ba52431408901a1ce5511"
+  integrity sha512-U3355po5WPejAagvDig+MA7v8NWr0+Dbx3a1pds19hx4i9CeXuBSpD7vl0fxKhk+Hfu3T+DN2aOR69HIwSJh1A==
+  dependencies:
+    flatpickr "^4.6.9"
 
 vue-router@4:
   version "4.1.2"
