@@ -1,4 +1,3 @@
-
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -14,9 +13,11 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "baseUrl": ".",
+    "noImplicitAny": false,
+    "allowJs": true,
     "paths": {
       "@/*": ["src/*"]
-    },
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

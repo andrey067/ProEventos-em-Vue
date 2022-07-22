@@ -9,10 +9,11 @@ import router from './router/index';
 import Popper from "vue3-popper";
 import VueFlatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
-
+import VeeValidate from 'vee-validate'
 
 const app = createApp(App);
 app.component("Popper", Popper);
+
 app.use(Toast, {
     transition: "Vue-Toastification__bounce",
     maxToasts: 20,
