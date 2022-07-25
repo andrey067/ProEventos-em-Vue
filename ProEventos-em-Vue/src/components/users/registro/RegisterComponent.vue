@@ -79,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import { UserProfile } from '@/models/UserProfile';
+import { UserProfile } from '../../../models/UserProfile';
 import useVuelidate from '@vuelidate/core';
 import { email, helpers, required } from '@vuelidate/validators';
 import { reactive } from 'vue';

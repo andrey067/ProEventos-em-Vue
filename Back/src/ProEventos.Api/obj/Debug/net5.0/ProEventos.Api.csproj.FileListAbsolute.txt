@@ -343,8 +343,8 @@ D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\scopedcss\b
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\ProEventos.Api.RazorTargetAssemblyInfo.cache
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\ProEventos.Api.csproj.CopyComplete
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\ProEventos.Api.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\refint\ProEventos.Api.dll
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\ProEventos.Api.pdb
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\ProEventos.Api.genruntimeconfig.cache
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\obj\Debug\net5.0\ref\ProEventos.Api.dll
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Api\bin\Debug\net5.0\ProEventos.Api.StaticWebAssets.xml
+D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Api\bin\Debug\net5.0\ref\ProEventos.Api.dll

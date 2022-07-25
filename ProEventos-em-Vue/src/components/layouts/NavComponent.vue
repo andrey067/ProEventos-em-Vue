@@ -1,5 +1,47 @@
 <template>
-    <nav class="navbar level" role="navigation" aria-label="main navigation" v-if="mostarNav">
+    <nav class="navbar navbar-expand-lg navbar-light nav-scroller bg-white shadow-sm">
+        <div class="container">
+            <router-link class="navbar-brand" to="/eventos/lista">
+                <i class="fa fa-users mb-2"></i>
+            </router-link>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <router-link class="nav-item" to="/eventos/lista">
+                        <a class="nav-link" aria-current="page">Eventos</a>
+                    </router-link>
+                    <router-link class="nav-item" to="/palestrantes">
+                        <a class="nav-link" aria-current="page">Palestrantes</a>
+                    </router-link>
+                    <!-- <router-link class="nav-item" to="/palestrantes">
+                        <a class="nav-link" aria-current="page">Contatos</a>
+                    </router-link> -->
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Audrey
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" routerLink="user/perfil/1">
+                                Perfil
+                            </a>
+                            <div role="separator" class="divider"></div>
+                            <a class="dropdown-item" href="user/login">
+                                Sair
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav class="navbar level" role="navigation" aria-label="main navigation" v-if="mostarNav">
         <div class="navbar-brand">
             <router-link class="navbar-item" to="/eventos/lista">
                 <i class="fa fa-users mb-2"></i>
@@ -24,22 +66,22 @@
                 <div class="navbar-dropdown">
                     <router-link to="/user/perfil" class="navbar-item">
                         Perfil
-                    </router-link>
-                    <!-- <a class="navbar-item">
+                    </router-link> -->
+    <!-- <a class="navbar-item">
                         Jobs
                     </a> -->
-                    <!-- <a class="navbar-item">
+    <!-- <a class="navbar-item">
                         Contact
                     </a> -->
-                    <hr class="navbar-divider">
+    <!-- <hr class="navbar-divider">
                     <router-link to="/user/registro" class="navbar-item">
                         Sair
                     </router-link>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- <div class="navbar-end">
+    <!-- <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
                         <a class="button is-primary">
@@ -51,7 +93,7 @@
                     </div>
                 </div>
             </div> -->
-    </nav>
+    <!-- </nav> -->
 </template>
 
 <script setup lang="ts">

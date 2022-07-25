@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+// import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 import App from './App.vue'
 import filters from './helpers/filters';
@@ -9,6 +9,9 @@ import router from './router/index';
 import Popper from "vue3-popper";
 import VueFlatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
+import '@popperjs/core';
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const app = createApp(App);
 app.component("Popper", Popper);
@@ -19,7 +22,6 @@ app.use(Toast, {
     newestOnTop: true
 });
 app.config.globalProperties.$filters = filters;
-app.use(router);
 app.use(router);
 app.use(VueFlatPickr);
 app.mount("#app");
