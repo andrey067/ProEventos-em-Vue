@@ -9,7 +9,6 @@ import router from './router/index';
 import Popper from "vue3-popper";
 import VueFlatPickr from 'vue-flatpickr-component';
 import 'flatpickr/dist/flatpickr.css';
-import VeeValidate from 'vee-validate'
 
 const app = createApp(App);
 app.component("Popper", Popper);
@@ -20,6 +19,7 @@ app.use(Toast, {
     newestOnTop: true
 });
 app.config.globalProperties.$filters = filters;
+app.use(router);
 app.use(router);
 app.use(VueFlatPickr);
 app.mount("#app");

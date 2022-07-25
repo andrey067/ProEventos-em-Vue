@@ -5,9 +5,9 @@ import DetalhesEvento from "../components/eventos/DetalhesEvento.vue";
 import EventoLista from "../components/eventos/EventoLista.vue";
 import UserComponent from "../components/users/UserComponent.vue";
 import LoginComponent from "../components/users/login/LoginComponent.vue";
-import RegistroComponent from "../components/users/registro/RegistroComponent.vue";
-import PerfilComponent from "../components/users/perfil/PerfilComponent.vue";
 import CadastrarEvento from "../components/eventos/CadastrarEvento.vue";
+import RegisterComponent from "../components/users/registro/RegisterComponent.vue";
+import UserProfile from "../components/users/perfil/UserProfile.vue";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -20,13 +20,13 @@ const routes: RouteRecordRaw[] = [
             },
             {
                 path: 'registro',
-                component: RegistroComponent
+                component: RegisterComponent
             }
         ]
     },
     {
         path: '/user/perfil',
-        component: PerfilComponent
+        component: UserProfile
     },
     {
         path: '/eventos',

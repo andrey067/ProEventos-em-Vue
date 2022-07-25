@@ -10,7 +10,9 @@
                 </h2>
             </div>
             <div class="p-3 level-right" v-if="botaoListar">
-                <button class="button is-normal is-rounded is-link" @click="listar()">Listar {{ titulo }}</button>
+                <router-link class="button is-normal is-rounded is-link" :to="`${router}/lista`">
+                    Listar {{ titulo }}
+                </router-link>
             </div>
         </div>
 
@@ -34,13 +36,13 @@ defineProps({
     botaoListar: {
         type: Boolean,
         default: false
+    },
+    router: {
+        type: String,
+        default: ''
     }
 })
 
-
-function listar() {
-
-}
 </script>
 
 <style scoped>

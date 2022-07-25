@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar level" role="navigation" aria-label="main navigation" v-if="mostarNav">
         <div class="navbar-brand">
-            <a class="navbar-item" to="/eventos/lista">
+            <router-link class="navbar-item" to="/eventos/lista">
                 <i class="fa fa-users mb-2"></i>
-            </a>
+            </router-link>
         </div>
 
         <div class="navbar-menu">

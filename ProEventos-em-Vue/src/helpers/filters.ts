@@ -10,7 +10,7 @@ const filters = {
     },
     format_date(value: string) {
         if (value) {
-            return moment(String(value)).format(Constantes.DATE_FMT)
+            return moment(new Date(value)).format(Constantes.DATE_FMT)
         }
     },
 }

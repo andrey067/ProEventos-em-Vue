@@ -52,7 +52,7 @@
                         <td class="d-none d-md-table-cell">{{ evento.local }}</td>
                         <td>{{ pipe.format_date(evento.dataEvento) }}</td>
                         <td>{{ evento.qtdPessoas }}</td>
-                        <td>{{ evento.lotes }}</td>
+                        <td>{{ evento.lotes[0]?.nome }}</td>
                         <td>
                             <Popper content="Excluir" hover placement="right">
                                 <button class="button is-danger is-small">
