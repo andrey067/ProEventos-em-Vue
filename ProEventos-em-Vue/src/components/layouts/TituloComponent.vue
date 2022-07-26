@@ -23,7 +23,7 @@ defineProps({
     },
     subtitulo: {
         type: String,
-        default: 'Desde 2021'
+        default: ''
     },
     iconClass: {
         type: String,

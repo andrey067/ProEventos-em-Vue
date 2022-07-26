@@ -13,7 +13,7 @@ import '@popperjs/core';
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/css/bootstrap.css'
-
+import VueElementLoading from "vue-element-loading";
 
 const app = createApp(App);
 app.component("Popper", Popper);
@@ -26,4 +26,5 @@ app.use(Toast, {
 app.config.globalProperties.$filters = filters;
 app.use(router);
 app.use(VueFlatPickr);
+app.component("VueElementLoading", VueElementLoading);
 app.mount("#app");

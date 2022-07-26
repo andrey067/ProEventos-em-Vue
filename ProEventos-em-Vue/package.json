@@ -17,6 +17,7 @@
     "moment": "^2.29.4",
     "page-loader": "^1.2.0",
     "vue": "^3.2.37",
+    "vue-element-loading": "^3.0.1",
     "vue-flatpickr-component": "9",
     "vue-router": "4",
     "vue-toastification": "^2.0.0-rc.5",

@@ -1,6 +1,6 @@
 <template>
     <LoadingComponenet :show="loading" />
-    <div class="card rounded shadow-sm p-3">
+    <div v-if="!loading" class="card rounded shadow-sm p-3">
         <div class="d-flex">
             <div class="flex-fill pr-3">
                 <div class="input-group mb-2">
@@ -75,7 +75,6 @@ import { onMounted } from "@vue/runtime-core";
 import { POSITION, useToast } from "vue-toastification";
 import LoadingComponenet from '../../components/layouts/LoadingComponenet.vue'
 import { useRouter } from 'vue-router';
-
 
 onMounted(() => {
     getEventos();

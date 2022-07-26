@@ -18,23 +18,25 @@
                     <!-- <router-link class="nav-item" to="/palestrantes">
                         <a class="nav-link" aria-current="page">Contatos</a>
                     </router-link> -->
-                </ul>
-            </div>
-            <div class="d-flex">
-                <ul class="nav-item dropdown me-2">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-current="page">
-                        Audrey
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
-                    </ul>
-                </ul>
-                <!-- <ul>
+                    <div>
+                        <ul class="nav-item dropdown me-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-current="page">
+                                Audrey
+                            </a>
+                            <ul class="dropdown-menu">
+                                <router-link to="/user/perfil">
+                                    <a class="dropdown-item">Perfil</a>
+                                </router-link>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <router-link to="/user/login">
+                                    <a class="dropdown-item">Sair</a>
+                                </router-link>
+                            </ul>
+                        </ul>
+                        <!-- <ul>
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
@@ -48,7 +50,10 @@
                         </div>
                     </div>
                 </ul> -->
+                    </div>
+                </ul>
             </div>
+
         </div>
     </nav>
 </template>
