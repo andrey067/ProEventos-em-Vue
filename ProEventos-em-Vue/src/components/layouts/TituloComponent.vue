@@ -1,22 +1,18 @@
 <template>
-    <section class="notification hero is-small is-info level">
-        <div class="d-flex hero-body level-left">
-            <div class="container">
-                <h1 class="title">
-                    {{ titulo }}
-                </h1>
-                <h2 class="subtitle">
-                    {{ subtitulo }}
-                </h2>
-            </div>
-            <div class="p-3 level-right" v-if="botaoListar">
-                <router-link class="button is-normal is-rounded is-link" :to="`${router}/lista`">
-                    Listar {{ titulo }}
-                </router-link>
+    <div class="d-flex p-3 my-3 text-white bg-secondary rounded shadow-sm justify-content-between">
+        <div class="d-flex align-items-center mr-auto">
+            <i class="{{iconClass}} mr-3"></i>
+            <div class="lh-100">
+                <h2 class="mb-0">{{ titulo }}</h2>
+                <small>{{ subtitulo }}</small>
             </div>
         </div>
-
-    </section>
+        <div class="p-3" v-if="botaoListar">
+            <router-link class="btn btn-outline-light" :to="`${router}/lista`">
+                Listar {{ titulo }}
+            </router-link>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">

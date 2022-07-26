@@ -12,6 +12,8 @@ import 'flatpickr/dist/flatpickr.css';
 import '@popperjs/core';
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.css'
+
 
 const app = createApp(App);
 app.component("Popper", Popper);

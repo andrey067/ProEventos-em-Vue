@@ -1,14 +1,13 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light nav-scroller bg-white shadow-sm">
-        <div class="container">
+        <div class="container-fluid">
             <router-link class="navbar-brand" to="/eventos/lista">
                 <i class="fa fa-users mb-2"></i>
             </router-link>
             <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <router-link class="nav-item" to="/eventos/lista">
                         <a class="nav-link" aria-current="page">Eventos</a>
@@ -20,80 +19,38 @@
                         <a class="nav-link" aria-current="page">Contatos</a>
                     </router-link> -->
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Audrey
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" routerLink="user/perfil/1">
-                                Perfil
-                            </a>
-                            <div role="separator" class="divider"></div>
-                            <a class="dropdown-item" href="user/login">
-                                Sair
-                            </a>
-                        </div>
-                    </li>
+            </div>
+            <div class="d-flex">
+                <ul class="nav-item dropdown me-2">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-current="page">
+                        Audrey
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                    </ul>
                 </ul>
+                <!-- <ul>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-primary">
+                                    <strong>Sign up</strong>
+                                </a>
+                                <a class="button is-light">
+                                    Log in
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </ul> -->
             </div>
         </div>
     </nav>
-
-    <!-- <nav class="navbar level" role="navigation" aria-label="main navigation" v-if="mostarNav">
-        <div class="navbar-brand">
-            <router-link class="navbar-item" to="/eventos/lista">
-                <i class="fa fa-users mb-2"></i>
-            </router-link>
-        </div>
-
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <router-link class="navbar-item" to="/eventos/lista">
-                    Eventos
-                </router-link>
-                <router-link class="navbar-item" to="/palestrantes">
-                    Palestrantes
-                </router-link>
-            </div>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                    Usuario
-                </a>
-
-                <div class="navbar-dropdown">
-                    <router-link to="/user/perfil" class="navbar-item">
-                        Perfil
-                    </router-link> -->
-    <!-- <a class="navbar-item">
-                        Jobs
-                    </a> -->
-    <!-- <a class="navbar-item">
-                        Contact
-                    </a> -->
-    <!-- <hr class="navbar-divider">
-                    <router-link to="/user/registro" class="navbar-item">
-                        Sair
-                    </router-link>
-                </div>
-            </div>
-        </div> -->
-
-    <!-- <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                            Log in
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-    <!-- </nav> -->
 </template>
 
 <script setup lang="ts">
