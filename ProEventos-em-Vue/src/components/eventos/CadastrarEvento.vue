@@ -124,7 +124,7 @@ import useVuelidate from '@vuelidate/core'
 import { required, email, helpers, sameAs, minLength, minValue } from '@vuelidate/validators'
 import { CadastrarEventoFrom } from "../../models/CadastroEventoForm";
 import { Titulo } from "../../interfaces/Titulo";
-import TituloComponent from '../layouts/TituloComponent.vue'
+import TituloComponent from '../../shared/TituloComponenent.vue'
 import { useRoute } from "vue-router";
 const route = useRoute();
 

@@ -1,10 +1,10 @@
-<template class="container">
-  <NavComponent />
+<template class="container">  
+  <NavBarComponent/>
   <router-view />
 </template>
 
 <script setup lang="ts">
-import NavComponent from './components/layouts/NavComponent.vue';
+import NavBarComponent from './shared/navBarComponent.vue';
 
 
 </script>

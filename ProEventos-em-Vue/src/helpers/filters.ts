@@ -8,7 +8,7 @@ const filters = {
         }
         return '$' + input.toFixed(2);
     },
-    format_date(value: string) {
+    format_date(value: Date) {
         if (value) {
             return moment(new Date(value)).format(Constantes.DATE_FMT)
         }

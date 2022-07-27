@@ -44,7 +44,7 @@
                         </div>
                         <div class="form-group col">
                             <label>Título</label>
-                            <select class="form-select">
+                            <select formControlName="titulo" class="form-control">
                                 <option value=""></option>
                                 <option value="0">Não Quero</option>
                                 <option value="Senhorita">Tecnólogo(a)</option>
@@ -61,14 +61,14 @@
                         </div>
                         <div class="form-group col-sm-5">
                             <label>Primeiro Nome</label>
-                            <input type="text" class="form-control" />
+                            <input type="text" formControlName="primeiroNome" class="form-control" />
                             <div class="invalid-feedback">
                                 <div>Primeiro nome é obrigatório</div>
                             </div>
                         </div>
                         <div class="form-group col-sm-5">
                             <label>Último nome</label>
-                            <input type="text" class="form-control" />
+                            <input type="text" formControlName="ultimoNome" class="form-control" />
                             <div class="invalid-feedback">
                                 <div>Último nome é obrigatório</div>
                             </div>
@@ -149,7 +149,7 @@
 </template>
 
 <script setup lang="ts">
-import TituloComponent from '../../layouts/TituloComponent.vue'
+import TituloComponent from '../../../shared/TituloComponenent.vue'
 </script>
 
 <style lang="css">

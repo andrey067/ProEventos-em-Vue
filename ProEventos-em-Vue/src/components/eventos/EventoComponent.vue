@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import TituloComponent from '../layouts/TituloComponent.vue';
+import TituloComponent from '../../shared/TituloComponenent.vue';
 
 </script>
 

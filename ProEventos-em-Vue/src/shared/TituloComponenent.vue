@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex p-3 my-3 text-white bg-secondary rounded shadow-sm justify-content-between">
+    <div class="d-flex p-3 my-3 bg-secondary text-white rounded shadow-sm">
         <div class="d-flex align-items-center mr-auto">
             <i class="{{iconClass}} mr-3"></i>
             <div class="lh-100">
@@ -8,9 +8,7 @@
             </div>
         </div>
         <div class="p-3" v-if="botaoListar">
-            <router-link class="btn btn-outline-light" :to="`${router}/lista`">
-                Listar {{ titulo }}
-            </router-link>
+            <router-link class="btn btn-outline-light" :to="`/${titulo}/lista`">Listar {{ titulo }}</router-link>
         </div>
     </div>
 </template>

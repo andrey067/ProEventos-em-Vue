@@ -3,10 +3,10 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import PalestrantesComponent from "../components/palestrantes/PalestrantesComponent.vue";
 import DetalhesEvento from "../components/eventos/DetalhesEvento.vue";
 import EventoLista from "../components/eventos/EventoLista.vue";
-import UserComponent from "../components/users/UserComponent.vue";
+import UserComponent from "../components/users/RegistroComponent.vue";
 import LoginComponent from "../components/users/login/LoginComponent.vue";
 import CadastrarEvento from "../components/eventos/CadastrarEvento.vue";
-import RegisterComponent from "../components/users/registro/RegisterComponent.vue";
+import RegistroComponent from "../components/users/registro/RegisterComponent.vue";
 import UserProfile from "../components/users/perfil/UserProfile.vue";
 
 const routes: RouteRecordRaw[] = [
@@ -20,7 +20,7 @@ const routes: RouteRecordRaw[] = [
             },
             {
                 path: 'registro',
-                component: RegisterComponent
+                component: RegistroComponent
             }
         ]
     },
