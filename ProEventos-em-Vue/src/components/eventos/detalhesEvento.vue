@@ -1,11 +1,12 @@
 <template>
+    <LoadingComponenet :show="loading" />
     <div class="card rounded shadow-sm">
         <form>
             <div class="p-3">
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label>Tema</label>
-                        <input type="text" class="form-control" placeholder="Insira o Tema">
+                        <input type="text" class="form-control" :value="evento?.tema" placeholder="Insira o Tema">
                         <div class="invalid-feedback">
                             Tema é obrigatório.
                         </div>
@@ -20,14 +21,15 @@
                 <div class="form-row">
                     <div class="form-group col-md-8">
                         <label>Local</label>
-                        <input type="text" class="form-control" placeholder="Local evento">
+                        <input type="text" class="form-control" :value="evento?.local" placeholder="Local evento">
                         <div class="invalid-feedback">
                             Local é obrigatório.
                         </div>
                     </div>
                     <div class="form-group col-md-4">
                         <label>Data e Hora</label>
-                        <input type="datetime" class="form-control" placeholder="Data Evento">
+                        <input type="datetime" class="form-control" :value="evento?.dataEvento"
+                            placeholder="Data Evento">
                         <div class="invalid-feedback">
                             Data e hora é obrigatório.
                         </div>
@@ -36,7 +38,8 @@
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label>Qtd Pessoas</label>
-                        <input type="text" class="form-control is-invalid" placeholder="Quantidade pessoa">
+                        <input type="text" class="form-control is-invalid" :value="evento?.qtdPessoas"
+                            placeholder="Quantidade pessoa">
                         <div class="invalid-feedback">
                             Qtd Pessoas é obrigatório.
                         </div>
@@ -46,14 +49,15 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label>Telefone</label>
-                        <input type="text" mask="(000) 0000-0000" class="form-control" placeholder="(000) 90000-0000">
+                        <input type="text" mask="(000) 0000-0000" class="form-control" :value="evento?.telefone"
+                            placeholder="(000) 90000-0000">
                         <div class="invalid-feedback">
                             Telefone é obrigatório.
                         </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label>Email</label>
-                        <input type="text" class="form-control" placeholder="e-mail">
+                        <input type="text" class="form-control" :value="evento?.email" placeholder="e-mail">
                         <div class="invalid-feedback">
                             Email é obrigatório.
                         </div>
@@ -235,15 +239,36 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "@vue/runtime-core";
-import { useRoute } from "vue-router";
+import { onMounted, ref } from "@vue/runtime-core";
+import { RouteParams, useRoute } from "vue-router";
+import { useToast } from "vue-toastification";
+import { Evento } from "../../models/Evento";
+import httpclient from "../../services/httpclient";
+import LoadingComponenet from '../../shared/LoadingComponenet.vue'
 const route = useRoute();
-
-
+const loading = ref(true);
+const evento = ref<Evento>();
+const toast = useToast();
 onMounted(() => {
+    console.log(route.params.id)
+    if (!Number.isNaN(route.params.id))
+        getEvento(route.params.id);
 
-    console.log(route.params)
 })
+
+function getEvento(id: any): void {
+    httpclient.get('/Evento/Evento/' + id)
+        .then((response) => {
+            evento.value = { ...response.data };
+        }).finally(() => {
+            loading.value = false;
+            toast.success("Evento Carregado com sucesso")
+        })
+        .catch((error) => {
+            loading.value = false;
+            toast.error("Erro ao carregar o Evento", error)
+        })
+}
 </script>
 
 <style scoped>

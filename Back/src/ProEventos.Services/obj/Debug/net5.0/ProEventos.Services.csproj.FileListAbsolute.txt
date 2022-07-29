@@ -55,7 +55,6 @@ E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.csproj.CoreCompileInputs.cache
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.csproj.CopyComplete
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.dll
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\obj\Debug\net5.0\refint\ProEventos.Services.dll
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.pdb
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\obj\Debug\net5.0\ref\ProEventos.Services.dll
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ProEventos.Services.deps.json
@@ -73,3 +72,4 @@ D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEve
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ProEventos.Services.pdb
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Services\obj\Debug\net5.0\ref\ProEventos.Services.dll
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Services\bin\Debug\net5.0\ref\ProEventos.Services.dll
+E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Services\bin\Debug\net5.0\ref\ProEventos.Services.dll

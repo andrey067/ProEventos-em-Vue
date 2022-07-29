@@ -71,7 +71,6 @@ E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ProEventos.CrossCutting.csproj.CoreCompileInputs.cache
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ProEventos.CrossCutting.csproj.CopyComplete
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ProEventos.CrossCutting.dll
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\refint\ProEventos.CrossCutting.dll
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ProEventos.CrossCutting.pdb
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ref\ProEventos.CrossCutting.dll
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.CrossCutting\bin\Debug\net5.0\ProEventos.CrossCutting.deps.json
@@ -93,3 +92,4 @@ D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\Pr
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ProEventos.CrossCutting.pdb
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\ref\ProEventos.CrossCutting.dll
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.CrossCutting\obj\Debug\net5.0\refint\ProEventos.CrossCutting.dll
+E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.CrossCutting\bin\Debug\net5.0\ref\ProEventos.CrossCutting.dll

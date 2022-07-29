@@ -1,5 +1,7 @@
 <template>
     <LoadingComponenet :show="loading" />
+    <!-- <ModalComponent :abrimodal="mostrarmodal" :title="'Teste'" variant="danger"/> -->
+    <ModalComponent :abrimodal="modalShow"/>
     <div v-if="!loading" class="card rounded shadow-sm">
         <div class="p-3">
             <div class="d-flex">
@@ -54,7 +56,7 @@
                         <td class="d-none d-md-table-cell">{{ evento.qtdPessoas }}</td>
                         <td class="d-none d-md-table-cell">{{ evento.lotes }}</td>
                         <td>
-                            <button type="button" class="btn btn-danger btn-lg" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                            <button type="button" class="btn btn-danger btn-lg" @click="deletarEvento($event , evento.id)" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
                                 <i class="fa fa-trash"></i>
                             </button>
                         </td>
@@ -74,7 +76,6 @@
 </template>
 
 <script setup lang="ts">
-import { getCurrentInstance } from 'vue'
 import { ref } from "@vue/reactivity";
 import { Evento } from "../../models/Evento";
 import httpclient from "../../services/httpclient";
@@ -83,6 +84,7 @@ import { POSITION, useToast } from "vue-toastification";
 import LoadingComponenet from '../../shared/LoadingComponenet.vue'
 import { useRouter } from 'vue-router';
 import filters from '../../helpers/filters'
+import ModalComponent from "../../shared/ModalComponent.vue";
 
 onMounted(() => {
     getEventos();
@@ -91,19 +93,16 @@ onMounted(() => {
 const eventos = ref<Evento[]>([])
 const exibirImagem = ref(false);
 const search = ref('');
-const internalInstance = getCurrentInstance();
-const pipe = internalInstance?.appContext.config.globalProperties.$filters;
 const modalShow = ref(false);
 const toast = useToast();
 const loading = ref(true);
 const router = useRouter()
-
+const mostrarmodal = ref(false);
 
 function getEventos(): void {
     httpclient.get<Array<Evento>>('/Evento')
-        .then((response) => {
-            console.log(response.data)
-            eventos.value = response.data
+        .then((response) => {                     
+            eventos.value = {...response.data};
         }).finally(() => loading.value = false)
         .catch((error) => {
             toast.error("Erro ao carregar os Eventos", error)
@@ -146,6 +145,12 @@ function makeToast() {
 
 function detalheEventos(eventoid: number) {
     router.push(`/eventos/detalhes/${eventoid}`)
+}
+
+function deletarEvento( event: Event,idEvento: Number){
+    event.stopPropagation();
+    console.log(idEvento)
+    mostarModal()
 }
 </script>
 
