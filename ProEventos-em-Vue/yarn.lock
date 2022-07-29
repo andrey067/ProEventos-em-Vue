@@ -9,7 +9,7 @@
 
 "@fortawesome/fontawesome-free@^5.15.2":
   version "5.15.4"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz#ecda5712b61ac852c760d8b3c79c96adca5554e5"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz"
   integrity sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==
 
 "@popperjs/core@^2.9.2":
@@ -253,14 +253,21 @@ boolbase@~1.0.0:
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
-bootstrap@^4.6.0:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.2.tgz#8e0cd61611728a5bf65a3a2b8d6ff6c77d5d7479"
-  integrity sha512-51Bbp/Uxr9aTuy6ca/8FbFloBUJZLHwnhTcnjIeRn2suQWsWzcuJhGjKDB5eppVte/8oCdOL3VuwxvZDUggwGQ==
+bootstrap-vue-3@^0.1.21:
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/bootstrap-vue-3/-/bootstrap-vue-3-0.1.21.tgz#66d227f2bd69e6ca774b3c308e906bc19ba8a64f"
+  integrity sha512-JHr7EDMLEpkN4W1TdPdFp3OGGEOMuKxcHmmLYay8Yk0Rx6HNG5LRtsZen12NQcPY3v40OSvip4ZLD4s9uA5U6w==
+  dependencies:
+    vue "3.x.x"
+
+bootstrap@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.0.tgz#838727fb60f1630db370fe57c63cbcf2962bb3d3"
+  integrity sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==
 
 bootswatch@^4.6.0:
   version "4.6.2"
-  resolved "https://registry.yarnpkg.com/bootswatch/-/bootswatch-4.6.2.tgz#64720ddabec4fa154e7b760aaf7066d340174ea9"
+  resolved "https://registry.npmjs.org/bootswatch/-/bootswatch-4.6.2.tgz"
   integrity sha512-pHOS3d2yM/x9Y7/zwVzfGhGIIBdIa/rPwipghh756PaSNJS3ott/29d9uehakgze3pDvbH4FoQVjbho8wsLm6A==
 
 brace-expansion@^1.1.7:
@@ -782,7 +789,7 @@ isobject@^3.0.1:
 
 jquery@^3.6:
   version "3.6.0"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  resolved "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
 
 json-schema-traverse@^0.4.1:
@@ -1065,7 +1072,7 @@ picomatch@^2.0.4, picomatch@^2.2.1:
 
 popper.js@^1.16.1:
   version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  resolved "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
 
 postcss@^8.1.10, postcss@^8.4.14:
@@ -1313,6 +1320,11 @@ vite@^3.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-bs-modal@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.npmjs.org/vue-bs-modal/-/vue-bs-modal-0.7.4.tgz"
+  integrity sha512-q2n7Sphice9Bo39eqi7Pn5mt79NcEaiMh8g6qdO0/UAra4TJu/8Cg5HgHdRQ5R55l3aho5vAY2+6GHrRGiSSGA==
+
 vue-cli-plugin-mdb5@~1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/vue-cli-plugin-mdb5/-/vue-cli-plugin-mdb5-1.2.0.tgz"
@@ -1331,7 +1343,7 @@ vue-demi@^0.13.4:
 
 vue-element-loading@^3.0.1:
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/vue-element-loading/-/vue-element-loading-3.0.1.tgz#3c4ab77d1b7e16870d036c386638eb31635c3bcd"
+  resolved "https://registry.npmjs.org/vue-element-loading/-/vue-element-loading-3.0.1.tgz"
   integrity sha512-WzQJKTmOWBEfKzVoRr9Mk2aLYVxJNEatWYTNuOTG8SwWGvNI9ZfnJBxVwqTpBPclGLG7bZqTLfco+BP3ebu5Sw==
 
 vue-flatpickr-component@9:
@@ -1368,7 +1380,7 @@ vue3-popper@^1.5.0:
     "@popperjs/core" "^2.9.2"
     debounce "^1.2.1"
 
-vue@^3.2.37:
+vue@3.x.x, vue@^3.2.37:
   version "3.2.37"
   resolved "https://registry.npmjs.org/vue/-/vue-3.2.37.tgz"
   integrity sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ==

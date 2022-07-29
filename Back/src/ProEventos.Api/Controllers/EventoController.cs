@@ -19,7 +19,7 @@ namespace ProEventos.Api.Controllers
         }
 
         [HttpGet]
-        [Route("/api/Evento")]
+        [Route("/api/Evento/")]
         public async Task<IActionResult> GetAll()
         {
             try
@@ -35,12 +35,13 @@ namespace ProEventos.Api.Controllers
             }
         }
 
-        [HttpGet("{id}")]        
-        public async Task<IActionResult> GetById(int Id)
+        [HttpGet]
+        [Route("/api/Evento/{id}")]
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {
-                var eventos = await _eventoService.GetAllEventosByIdAsync(Id, true);
+                var eventos = await _eventoService.GetAllEventosByIdAsync(id, true);
                 if (eventos == null) return NotFound("Nenhum evento encontrado");
 
                 return Ok(eventos);
@@ -51,7 +52,8 @@ namespace ProEventos.Api.Controllers
             }
         }
 
-        [HttpGet("{tema}")]
+        [HttpGet]
+        [Route("Evento/tema/{tema}")]
         public async Task<IActionResult> GetByTema(string tema)
         {
             try
@@ -100,6 +102,7 @@ namespace ProEventos.Api.Controllers
         }
 
         [HttpDelete]
+        [Route("/api/Evento/{id}")]
         public async Task<IActionResult> UpdateEvento(int eventoId)
         {
             try

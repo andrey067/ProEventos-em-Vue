@@ -1,5 +1,6 @@
 <template>
     <LoadingComponenet :show="loading" />
+    <ModalComponent/>
     <div class="card rounded shadow-sm">
         <form>
             <div class="p-3">
@@ -245,6 +246,7 @@ import { useToast } from "vue-toastification";
 import { Evento } from "../../models/Evento";
 import httpclient from "../../services/httpclient";
 import LoadingComponenet from '../../shared/LoadingComponenet.vue'
+import ModalComponent from "../../shared/ModalComponent.vue";
 const route = useRoute();
 const loading = ref(true);
 const evento = ref<Evento>();
@@ -257,12 +259,11 @@ onMounted(() => {
 })
 
 function getEvento(id: any): void {
-    httpclient.get('/Evento/Evento/' + id)
+    httpclient.get('Evento/' + id)
         .then((response) => {
             evento.value = { ...response.data };
         }).finally(() => {
-            loading.value = false;
-            toast.success("Evento Carregado com sucesso")
+            loading.value = false;            
         })
         .catch((error) => {
             loading.value = false;

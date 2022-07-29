@@ -1,7 +1,8 @@
 <template>
     <LoadingComponenet :show="loading" />
-    <!-- <ModalComponent :abrimodal="mostrarmodal" :title="'Teste'" variant="danger"/> -->
-    <ModalComponent :abrimodal="modalShow"/>
+    <b-modal ref="modal-1" title="BootstrapVue">
+        <p class="my-4">Hello from modal!</p>
+    </b-modal>
     <div v-if="!loading" class="card rounded shadow-sm">
         <div class="p-3">
             <div class="d-flex">
@@ -22,54 +23,21 @@
                     </a>
                 </div>
             </div>
-            <!-- <h3>Filtro: {{filtroLista}}</h3> -->
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" class="d-none d-md-table-cell">
-                            <button type="button" class="btn btn-outline-light btn-sm">
-                                <i class="{{!exibirImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}"></i>
-                                {{ !exibirImagem ? 'exibir' : 'ocultar' }}
-                            </button>
-                        </th>
-                        <th scope="col">#</th>
-                        <th scope="col">Tema</th>
-                        <th scope="col" class="d-none d-md-table-cell">Local</th>
-                        <th scope="col">Data</th>
-                        <th scope="col" class="d-none d-md-table-cell">Qtd Pessoas</th>
-                        <th scope="col" class="d-none d-md-table-cell">Lote</th>
-                        <th scope="col">Opções</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="evento in eventos" :key="evento.id" style="cursor: pointer;"
-                        @click="detalheEventos(evento.id)">
-                        <td class="d-none d-md-table-cell">
-                            <img src="/assets/{{evento.imagemURL}}">
-                            <!-- <img  src="/assets/{{evento.imagemURL}}"
-            [style.width.px]="larguraImagem" [style.margin.px]="margemImagem"> -->
-                        </td>
-                        <td>{{ evento.id }}</td>
-                        <td>{{ evento.tema }}</td>
-                        <td class="d-none d-md-table-cell">{{ evento.local }}</td>
-                        <td>{{ filters.format_date(evento.dataEvento) }}</td>
-                        <td class="d-none d-md-table-cell">{{ evento.qtdPessoas }}</td>
-                        <td class="d-none d-md-table-cell">{{ evento.lotes }}</td>
-                        <td>
-                            <button type="button" class="btn btn-danger btn-lg" @click="deletarEvento($event , evento.id)" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="8" class="text-center">
-                            <h4>Nenhum evento encontrado!</h4>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+            <b-table :striped="striped" hover :bordered="bordered" :fields="fields" :items="eventos"
+                @row-clicked="mostrarImagem">
+                <!-- <template #row-details="row">
+                    <b-card>{{ row.item.id }}</b-card>
+                </template> -->
+                <template #cell(dataEvento)="data">
+                    {{ filters.format_date(data.value) }}
+                </template>
+                <template v-slot:cell(actions)="data">
+                    <b-button v-b-tooltip.hover title="Excluir evento" @click="deletarEvento($event, data.item.id)"
+                        variant="danger">
+                        <i class="fa fa-trash"></i>
+                    </b-button>
+                </template>
+            </b-table>
         </div>
     </div>
     <router-view></router-view>
@@ -80,29 +48,37 @@ import { ref } from "@vue/reactivity";
 import { Evento } from "../../models/Evento";
 import httpclient from "../../services/httpclient";
 import { onMounted } from "@vue/runtime-core";
-import { POSITION, useToast } from "vue-toastification";
+import { useToast } from "vue-toastification";
 import LoadingComponenet from '../../shared/LoadingComponenet.vue'
 import { useRouter } from 'vue-router';
 import filters from '../../helpers/filters'
-import ModalComponent from "../../shared/ModalComponent.vue";
-
 onMounted(() => {
     getEventos();
-})
+});
+
+const fields = [
+    { key: 'id', label: 'Id' },
+    { key: 'tema', label: 'Tema' },
+    { key: 'local', label: 'Local' },
+    { key: 'dataEvento', label: 'Data Evento' },
+    { key: 'qtdPessoas', label: 'Qtd Pessoas' },
+    { key: 'lotes', label: 'Lotes' },
+    { key: 'actions', label: '' },
+];
 
 const eventos = ref<Evento[]>([])
 const exibirImagem = ref(false);
 const search = ref('');
-const modalShow = ref(false);
 const toast = useToast();
 const loading = ref(true);
 const router = useRouter()
-const mostrarmodal = ref(false);
+const striped = ref(true);
+const bordered = ref(true);
 
 function getEventos(): void {
-    httpclient.get<Array<Evento>>('/Evento')
-        .then((response) => {                     
-            eventos.value = {...response.data};
+    httpclient.get<Evento[]>('/Evento')
+        .then((response) => {
+            eventos.value = response.data;           
         }).finally(() => loading.value = false)
         .catch((error) => {
             toast.error("Erro ao carregar os Eventos", error)
@@ -110,6 +86,7 @@ function getEventos(): void {
 }
 
 function mostrarImagem(): void {
+    console.log("Teste")
     exibirImagem.value = !exibirImagem.value
 }
 
@@ -122,35 +99,15 @@ function filtrar() {
     });
 }
 
-function mostarModal() {
-    modalShow.value = !modalShow.value
-}
-
-function makeToast() {
-    toast.success("I'm an info toast!", {
-        position: POSITION.BOTTOM_RIGHT,
-        timeout: 5000,
-        closeOnClick: true,
-        pauseOnFocusLoss: true,
-        pauseOnHover: true,
-        draggable: true,
-        draggablePercent: 0.6,
-        showCloseButtonOnHover: false,
-        hideProgressBar: true,
-        closeButton: "button",
-        rtl: false
-    });
-}
-
 
 function detalheEventos(eventoid: number) {
     router.push(`/eventos/detalhes/${eventoid}`)
 }
 
-function deletarEvento( event: Event,idEvento: Number){
+function deletarEvento(event: Event, idEvento: Number) {
     event.stopPropagation();
-    console.log(idEvento)
-    mostarModal()
+    console.log(idEvento);
+
 }
 </script>
 

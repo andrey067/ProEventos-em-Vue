@@ -71,5 +71,5 @@ D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\Pro
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.dll
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.pdb
 D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\refint\ProEventos.Persistence.dll
 E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ref\ProEventos.Persistence.dll
+D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ref\ProEventos.Persistence.dll
