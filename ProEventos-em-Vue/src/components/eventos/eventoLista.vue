@@ -1,8 +1,5 @@
 <template>
-    <LoadingComponenet :show="loading" />
-    <b-modal ref="modal-1" title="BootstrapVue">
-        <p class="my-4">Hello from modal!</p>
-    </b-modal>
+    <LoadingComponenet :show="loading" />    
     <div v-if="!loading" class="card rounded shadow-sm">
         <div class="p-3">
             <div class="d-flex">
