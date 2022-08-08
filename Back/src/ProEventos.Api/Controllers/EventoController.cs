@@ -41,7 +41,7 @@ namespace ProEventos.Api.Controllers
         {
             try
             {
-                var eventos = await _eventoService.GetAllEventosByIdAsync(eventoId, true);
+                  EventoDto eventos = await _eventoService.GetAllEventosByIdAsync(eventoId, true);
                 if (eventos == null) return NoContent();
                 return Ok(eventos);
             }
