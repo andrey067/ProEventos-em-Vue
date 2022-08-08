@@ -1,6 +1,6 @@
-import { Lote } from "./lote";
-import { Palestrante } from "./palestrante";
-import { RedeSocial } from "./redeSocial";
+import { Lote } from "../lote";
+import { Palestrante } from "../palestrante";
+import { RedeSocial } from "../redeSocial";
 
 export interface Evento {
   id: number;

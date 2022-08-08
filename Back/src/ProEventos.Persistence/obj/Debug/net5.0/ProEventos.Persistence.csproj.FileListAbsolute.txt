@@ -30,7 +30,6 @@ D:\Estudo\FullStack .NET + Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\
 D:\Estudo\FullStack .NET + Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.deps.json
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.dll
-E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ref\ProEventos.Persistence.dll
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.pdb
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.dll
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.pdb
@@ -43,33 +42,34 @@ E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\Pro
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.dll
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll
 E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.pdb
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.deps.json
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.dll
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.pdb
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.dll
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.pdb
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.AssemblyReference.cache
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfoInputs.cache
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfo.cs
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CoreCompileInputs.cache
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CopyComplete
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.dll
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.pdb
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.deps.json
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.pdb
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.pdb
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.AssemblyReference.cache
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfoInputs.cache
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfo.cs
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CoreCompileInputs.cache
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CopyComplete
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.pdb
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll
-E:\Cursos\FullStack.Net_Angular\Curso em Vue\proeventos-app\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ref\ProEventos.Persistence.dll
-D:\Estudo\ProEventos-em-Vue\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ref\ProEventos.Persistence.dll
+E:\Cursos\ProEventos-em-Vue\Back\src\ProEventos.Persistence\obj\Debug\net5.0\refint\ProEventos.Persistence.dll
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.deps.json
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.dll
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.pdb
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.dll
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.pdb
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.AssemblyReference.cache
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfoInputs.cache
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfo.cs
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CoreCompileInputs.cache
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CopyComplete
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.dll
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\refint\ProEventos.Persistence.dll
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.pdb
+D:\Estudo\FullStack.Net_Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.deps.json
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.dll
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Persistence.pdb
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.dll
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\bin\Debug\net5.0\ProEventos.Domain.pdb
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.AssemblyReference.cache
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfoInputs.cache
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.AssemblyInfo.cs
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CoreCompileInputs.cache
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.csproj.CopyComplete
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.dll
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\refint\ProEventos.Persistence.dll
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ProEventos.Persistence.pdb
+E:\Cursos\ProEventos-em-Angular\Back\src\ProEventos.Persistence\obj\Debug\net5.0\ref\ProEventos.Persistence.dll

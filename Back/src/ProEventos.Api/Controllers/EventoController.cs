@@ -1,6 +1,7 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using ProEventos.Domain.Entities;
-using ProEventos.Domain.Interfaces;
+using ProEventos.Interfaces;
+using ProEventos.Services.Dtos;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -8,24 +9,24 @@ using System.Threading.Tasks;
 namespace ProEventos.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class EventoController : ControllerBase
+    [Route("/eventos")]
+    public class EventoController : BaseController
     {
         private readonly IEventoService _eventoService;
 
-        public EventoController(IEventoService eventoService)
+        public EventoController(IEventoService eventoService, IMapper mapper)
         {
             _eventoService = eventoService;
         }
 
         [HttpGet]
-        [Route("/api/Evento/")]
         public async Task<IActionResult> GetAll()
         {
             try
             {
                 var eventos = await _eventoService.GetAllEventosAsync(true);
-                if (eventos == null) return NotFound("Nenhum evento encontrado");
+                if (eventos == null) return NoContent();
+
 
                 return Ok(eventos);
             }
@@ -35,15 +36,13 @@ namespace ProEventos.Api.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("/api/Evento/{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("{eventoId}")]
+        public async Task<IActionResult> GetById(int eventoId)
         {
             try
             {
-                var eventos = await _eventoService.GetAllEventosByIdAsync(id, true);
-                if (eventos == null) return NotFound("Nenhum evento encontrado");
-
+                var eventos = await _eventoService.GetAllEventosByIdAsync(eventoId, true);
+                if (eventos == null) return NoContent();
                 return Ok(eventos);
             }
             catch (Exception ex)
@@ -52,14 +51,13 @@ namespace ProEventos.Api.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("Evento/tema/{tema}")]
+        [HttpGet("/tema/{tema}")]
         public async Task<IActionResult> GetByTema(string tema)
         {
             try
             {
                 var eventos = await _eventoService.GetAllEventosByTemaAsync(tema, true);
-                if (eventos == null) return NotFound("Nenhum evento encontrado");
+                if (eventos == null) return NoContent();
 
                 return Ok(eventos);
             }
@@ -70,7 +68,7 @@ namespace ProEventos.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertEvento(int eventoId, Evento evento)
+        public async Task<IActionResult> InsertEvento(int eventoId, EventoDto evento)
         {
             try
             {
@@ -86,13 +84,13 @@ namespace ProEventos.Api.Controllers
 
         }
 
-        [HttpPut]
-        public async Task<IActionResult> DeletarEvento(Evento evento)
+        [HttpDelete("{eventoId}")]
+        public async Task<IActionResult> DeletarEvento(int eventoId)
         {
             try
             {
-                var eventos = await _eventoService.AddEvento(evento);
-                if (eventos == null) BadRequest("Erro ao deletar evento");
+                var eventos = await _eventoService.DeleteEvento(eventoId);
+
                 return Ok("Deletado");
             }
             catch (Exception ex)
@@ -101,8 +99,7 @@ namespace ProEventos.Api.Controllers
             }
         }
 
-        [HttpDelete]
-        [Route("/api/Evento/{id}")]
+        [HttpPut]
         public async Task<IActionResult> UpdateEvento(int eventoId)
         {
             try

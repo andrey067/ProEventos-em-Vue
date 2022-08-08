@@ -3,36 +3,52 @@
     @select="handleSelect">
     <!-- <el-menu-item index="0">LOGO</el-menu-item> -->
     <el-space wrap>
-      <a>
-        <i class="fa fa-users"></i>
-      </a>
+      <router-link to="evento/lista" style="font-size: 20px">
+        <el-icon>
+          <Star style="width: 1em; height: 1em; margin-left: 10px" />
+        </el-icon>
+      </router-link>
     </el-space>
-    <el-menu-item index="1">Evento
-      <el-divider direction="vertical" />
-    </el-menu-item>
-
-    <el-menu-item index="1">Palestrantes
-      <el-divider direction="vertical" />
-    </el-menu-item>
-
-    <el-menu-item index="1">Contatos</el-menu-item>
+    <el-space spacer="|">
+      <el-menu-item router index="eventos">Eventos</el-menu-item>
+      <el-menu-item router index="palestrantes">Palestrantes</el-menu-item>
+      <el-menu-item router index="contatos">Contatos</el-menu-item>
+    </el-space>
 
 
     <div class="flex-grow" />
-    <el-sub-menu index="2">
+    <el-sub-menu index="profile">
       <template #title>Audrey</template>
-      <el-menu-item index="2-1">Perfil</el-menu-item>
-      <el-menu-item index="2-2">Sair</el-menu-item>
+      <el-menu-item index="perfil">Perfil</el-menu-item>
+      <el-menu-item index="logout">Sair</el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Star } from '@element-plus/icons-vue'
+import { useRouter } from 'vue-router'
+const router = useRouter();
+const activeIndex = ref("eventos");
+const handleSelect = (key: string) => {
+  switch (key) {
+    case ("eventos"):
+      router.push({ name: "lista" })
+      activeIndex.value = key
+      break;
 
-const activeIndex = ref('1')
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
+    case ("palestrantes"):
+      router.push({ name: "palestrantes" })
+      activeIndex.value = key
+      break;
+
+    case ("contatos"):
+      router.push({ name: "contatos" })
+      activeIndex.value = key
+      break;
+  }
+
 }
 </script>
 

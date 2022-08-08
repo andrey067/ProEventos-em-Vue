@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import EventoComponent from '../components/eventos/EventoComponent.vue'
 import EventoLista from '../components/eventos/EventoLista.vue'
+import DetalhesEvento from '../components/eventos/DetalhesEvento.vue'
 
 
 const routes: RouteRecordRaw[] = [
@@ -35,13 +36,15 @@ const routes: RouteRecordRaw[] = [
             //     path: 'detalhes',
             //     component: DetalhesEvento
             // },
-            // {
-            //     path: 'detalhes/:id',
-            //     component: DetalhesEvento
-            // },
+            {
+                path: 'detalhes/:id',
+                name:"detalhe",
+                component: DetalhesEvento,
+            },
             {
                 path: 'lista',
-                component: EventoLista
+                name:"lista",
+                component: EventoLista,
             }
         ]
     },

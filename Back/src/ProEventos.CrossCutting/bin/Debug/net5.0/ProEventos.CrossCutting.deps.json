@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ProEventos.CrossCutting/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
           "Bogus": "34.0.1",
           "ProEventos.Domain": "1.0.0",
           "ProEventos.Persistence": "1.0.0",
@@ -18,6 +19,17 @@
           "ProEventos.CrossCutting.dll": {}
         }
       },
+      "AutoMapper/11.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.1.0"
+          }
+        }
+      },
       "Bogus/34.0.1": {
         "runtime": {
           "lib/netstandard2.0/Bogus.dll": {
@@ -26,6 +38,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.Sqlite.Core/5.0.14": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
@@ -344,6 +357,7 @@
       },
       "ProEventos.Services/1.0.0": {
         "dependencies": {
+          "AutoMapper": "11.0.1",
           "ProEventos.Domain": "1.0.0"
         },
         "runtime": {
@@ -358,12 +372,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
+      "path": "automapper/11.0.1",
+      "hashPath": "automapper.11.0.1.nupkg.sha512"
+    },
     "Bogus/34.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-49iq7QrD0wb7V4/FcK8p3dWdJxNUbojaqK9L6KRvdikIuRjt38EsNp7QXICcYdbYw01K8BHUdxlnTNn/YX3qDA==",
       "path": "bogus/34.0.1",
       "hashPath": "bogus.34.0.1.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/5.0.14": {
       "type": "package",

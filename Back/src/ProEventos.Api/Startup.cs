@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using ProEventos.CrossCutting.DependencyInjection;
 using ProEventos.Persistence;
+using ProEventos.Persistence.Seeds;
 
 namespace ProEventos.Api
 {
@@ -23,9 +23,12 @@ namespace ProEventos.Api
         public void ConfigureServices(IServiceCollection services)
         {
             ConfigureService.ConfigureDependenciesServices(services);
+            ConfigureService.RegisterAutoMapper(services);
             ConfigureRepository.ConfigureDependenciesRepository(services, Configuration);
             services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddCors();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -59,11 +62,20 @@ namespace ProEventos.Api
             app.UseCors(acess => acess.AllowAnyHeader()
                                         .AllowAnyMethod()
                                         .AllowAnyOrigin());
-            app
-                .UseEndpoints(endpoints =>
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            using (var service = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
+                                                                .CreateScope())
+            {
+                using (var context = service.ServiceProvider.GetService<DataContext>())
                 {
-                    endpoints.MapControllers();
-                });
+                    EventoSeeds.Eventos(context);
+                }
+            }
         }
     }
 }
