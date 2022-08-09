@@ -60,12 +60,15 @@ function confirmarDeletarEvento(event: any, evento: Evento) {
             type: 'warning',
         }
     ).then(() => {
+        let statusRequest: { status: number; };
         deletar(evento).then((response) => {
-            if (response.status == 200)
+            getEventos();
+            statusRequest = response.status
+        }).finally(() => {
+            if (statusRequest.status == 200)
                 return ElNotification.success({ title: "Sucesso", message: "Evento deletado com sucesso", offset: 100 })
             ElNotification.error({ title: "Erro", message: "Erro ao deletar o evento", offset: 100 })
-        }).finally(() => {
-            getEventos();
+
         })
 
     }).catch(() => {
@@ -111,7 +114,6 @@ async function deletar(evento: Evento): Promise<any> {
 }
 
 function detalheEvento(evento: Evento | undefined) {
-    console.log("detalhe evento", evento?.id)
     router.push(`/eventos/detalhes/${evento?.id}`)
 }
 

@@ -1,7 +1,6 @@
 <template>
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
     @select="handleSelect">
-    <!-- <el-menu-item index="0">LOGO</el-menu-item> -->
     <el-space wrap>
       <router-link to="evento/lista" style="font-size: 20px">
         <el-icon>
@@ -20,7 +19,7 @@
     <el-sub-menu index="profile">
       <template #title>Audrey</template>
       <el-menu-item index="perfil">Perfil</el-menu-item>
-      <el-menu-item index="logout">Sair</el-menu-item>
+      <el-menu-item index="login">Sair</el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>
@@ -31,6 +30,7 @@ import { Star } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
 const router = useRouter();
 const activeIndex = ref("eventos");
+
 const handleSelect = (key: string) => {
   switch (key) {
     case ("eventos"):
@@ -46,6 +46,10 @@ const handleSelect = (key: string) => {
     case ("contatos"):
       router.push({ name: "contatos" })
       activeIndex.value = key
+      break;
+
+    case ("login"):
+      router.push({ name: "login" })    
       break;
   }
 

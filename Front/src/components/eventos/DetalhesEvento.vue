@@ -16,9 +16,9 @@
                     </el-form-item>
                 </el-col>
                 <el-col :span="4">
-                    <el-form-item label="Data Evento" prop="dataEvento" style="margin-left: 2%">                        
-                        <el-date-picker  format="DD/MM/YYYY"  value-format="DD-MM-YYYY" change v-model="evento.dataEvento" type="date" placeholder="Data do evento"
-                            style="width: 100%" />
+                    <el-form-item label="Data Evento" prop="dataEvento" style="margin-left: 2%">
+                        <el-date-picker format="DD/MM/YYYY" value-format="DD-MM-YYYY" @change="update()" v-model="evento.dataEvento"
+                            type="date" placeholder="Data do evento" style="width: 100%" />
                     </el-form-item>
                 </el-col>
             </el-row>
@@ -72,7 +72,7 @@ const evento = ref<Evento>({
     id: 0,
     tema: '',
     local: '',
-    dataEvento: new Date(),
+    dataEvento: '',
     qtdPessoas: 0,
     telefone: '',
     email: '',
@@ -130,7 +130,6 @@ function resetForm(formEl: FormInstance | undefined) {
 function getEvento(id: any): void {
     httpclient.get<Evento>('/eventos/' + id)
         .then((response) => {
-            console.log("response", response)
             evento.value = { ...response.data };
             console.log("evento.value", evento.value)
         }).finally(() => {
@@ -153,7 +152,9 @@ onMounted(() => {
         getEvento(route.params.id);
 
 })
-
+function update(){
+    evento.value.dataEvento = evento.value.dataEvento;
+}
 </script>
 
 <style scoped>

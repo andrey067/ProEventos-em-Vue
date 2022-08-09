@@ -2,23 +2,25 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import EventoComponent from '../components/eventos/EventoComponent.vue'
 import EventoLista from '../components/eventos/EventoLista.vue'
 import DetalhesEvento from '../components/eventos/DetalhesEvento.vue'
-
+import UserComponent from '../components/user/UserComponent.vue'
+import LoginComponent from '../components/user/login/LoginComponent.vue'
 
 const routes: RouteRecordRaw[] = [
-    // {
-    //     path: '/user',
-    //     component: UserComponent,
-    //     children: [
-    //         {
-    //             path: 'login',
-    //             component: LoginComponent
-    //         },
-    //         {
-    //             path: 'registro',
-    //             component: RegistroComponent
-    //         }
-    //     ]
-    // },
+    {
+        path: '/user',
+        component: UserComponent,
+        children: [
+            {
+                path: 'login',
+                component: LoginComponent,
+                name: 'login'
+            },
+            // {
+            //     path: 'registro',
+            //     component: RegistroComponent
+            // }
+        ]
+    },
     // {
     //     path: '/user/perfil',
     //     component: UserProfile
@@ -38,12 +40,12 @@ const routes: RouteRecordRaw[] = [
             // },
             {
                 path: 'detalhes/:id',
-                name:"detalhe",
+                name: "detalhe",
                 component: DetalhesEvento,
             },
             {
                 path: 'lista',
-                name:"lista",
+                name: "lista",
                 component: EventoLista,
             }
         ]

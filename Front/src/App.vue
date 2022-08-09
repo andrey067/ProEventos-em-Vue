@@ -4,7 +4,9 @@
     <MenuComponent />
     <div class="container-fluid">
       <TituloComponent :titulo="dadosTitulo?.titulo" :subtitulo="dadosTitulo?.subtitulo"
-        :icon-class="dadosTitulo?.iconClass" :botao-listar="true" />
+        :icon-class="dadosTitulo?.iconClass" :botaolistar="dadosTitulo?.botaolistar"
+        :mostrarTitulo="dadosTitulo?.mostrarTitulo" />
+
       <router-view @titulo="handleCustomChange" />
     </div>
   </div>
@@ -19,10 +21,9 @@ import TituloComponent from './shared/TituloComponent.vue';
 const dadosTitulo = ref<Titulo>();
 
 function handleCustomChange(event: Event) {
-  console.log("Teste", event)
+  console.log("event", event);
   let titulo = event as unknown as Titulo;
   dadosTitulo.value = { ...titulo }
-  console.log("titulo", titulo);
 }
 
 </script>

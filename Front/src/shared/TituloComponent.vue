@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex p-3 my-3 bg-secondary text-white rounded shadow-sm">
+    <div class="d-flex p-3 my-3 bg-secondary text-white rounded shadow-sm" v-if="mostrarTitulo">
         <div class="d-flex align-items-center mr-auto">
             <i class="{{iconClass}} mr-3"></i>
             <div class="lh-100">
@@ -10,19 +10,7 @@
         <div class="p-3" v-if="botaoListar">
             <router-link class="btn btn-outline-light" :to="`/${titulo}/lista`">Listar {{ titulo }}</router-link>
         </div>
-    </div>
-    <!-- <div class="d-flex p-3 my-3 bg-secondary text-white rounded shadow-sm">
-        <div class="d-flex align-items-center mr-auto"> -->
-    <!-- <i class="{{iconClass}} mr-3"></i> -->
-    <!-- <div class="lh-100">
-                <h2 class="mb-0">Evento</h2>
-                <small>Evento</small>
-            </div>
-        </div>
-        <div class="p-3">
-            <button class="btn btn-outline-light"></button>
-        </div>
-    </div> -->
+    </div>    
 </template>
 
 <script setup lang="ts">
@@ -46,7 +34,11 @@ defineProps({
     router: {
         type: String,
         default: 'asdasd'
-    }
+    },
+    mostrarTitulo: {
+        type: Boolean,
+        default: true
+    },
 })
 </script>
 

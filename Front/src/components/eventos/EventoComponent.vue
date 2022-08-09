@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from "vue-demi"
-import { useRoute, useRouter } from "vue-router";
+import { watch } from "vue"
+import { useRoute } from "vue-router";
 
 const route = useRoute();
 const emit = defineEmits(['titulo'])
@@ -15,6 +15,7 @@ watch(() => route.name, (first) => {
 
 function titlePros(routername?: string): {} {
   let titulo = {};
+
   switch (routername) {
     case "lista":
       titulo = {
