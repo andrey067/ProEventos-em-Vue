@@ -17,11 +17,11 @@
 defineProps({
     titulo: {
         type: String,
-        default: "Titulo"
+        default: "Evento"
     },
     subtitulo: {
         type: String,
-        default: 'subtitulo'
+        default: 'Lista  de Evento'
     },
     iconClass: {
         type: String,
@@ -29,11 +29,11 @@ defineProps({
     },
     botaoListar: {
         type: Boolean,
-        default: false
+        default: true
     },
     router: {
         type: String,
-        default: 'asdasd'
+        default: 'evento'
     },
     mostrarTitulo: {
         type: Boolean,

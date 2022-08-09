@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, watch } from "vue-demi"
+import { onMounted } from "vue-demi"
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -16,13 +16,9 @@ onMounted(() => {
     emit("titulo", titlePros(route.name?.toString()))
 })
 
-// watch(() => route.name, (first) => {
-//     console.log("first", first)
-
-// })
 
 function titlePros(routername?: string): {} {
-    let titulo = {};    
+    let titulo = {};
     switch (routername) {
         case "login":
             titulo = {
@@ -39,7 +35,7 @@ function titlePros(routername?: string): {} {
             break;
         default:
             titulo
-    }    
+    }
     return titulo;
 }
 </script>

@@ -4,6 +4,7 @@ import EventoLista from '../components/eventos/EventoLista.vue'
 import DetalhesEvento from '../components/eventos/DetalhesEvento.vue'
 import UserComponent from '../components/user/UserComponent.vue'
 import LoginComponent from '../components/user/login/LoginComponent.vue'
+import RegistrarUsuario from '../components/user/registrar/RegistrarUsuario.vue'
 
 const routes: RouteRecordRaw[] = [
     {
@@ -15,10 +16,10 @@ const routes: RouteRecordRaw[] = [
                 component: LoginComponent,
                 name: 'login'
             },
-            // {
-            //     path: 'registro',
-            //     component: RegistroComponent
-            // }
+            {
+                path: 'registro',
+                component: RegistrarUsuario
+            }
         ]
     },
     // {

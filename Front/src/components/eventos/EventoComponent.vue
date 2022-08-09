@@ -1,28 +1,35 @@
 <template>
+  <TituloComponent :titulo="dadosTitulo?.titulo" :subtitulo="dadosTitulo?.subtitulo"
+    :icon-class="dadosTitulo?.iconClass" :botaolistar="dadosTitulo?.botaolistar"
+    :mostrarTitulo="dadosTitulo?.mostrarTitulo" />
   <router-view></router-view>
 </template>
 
 <script setup lang="ts">
-import { watch } from "vue"
+import { ref, watch } from "vue"
 import { useRoute } from "vue-router";
-
+import { Titulo } from "../../interfaces/Titulo";
+import TituloComponent from '../../shared/TituloComponent.vue'
 const route = useRoute();
-const emit = defineEmits(['titulo'])
 
 watch(() => route.name, (first) => {
-  emit("titulo", titlePros(first?.toString()))
+  console.log("route", first)
+  dadosTitulo.value = titlePros(first?.toString())
 })
 
-function titlePros(routername?: string): {} {
-  let titulo = {};
+const dadosTitulo = ref<Titulo>();
 
+function titlePros(routername?: string): Titulo {
+  let titulo = {} as Titulo;
   switch (routername) {
     case "lista":
       titulo = {
         iconClass: 'fa fa-users',
         subtitulo: 'Lista de Eventos',
         titulo: "Evento",
-        router: "evento"
+        router: "evento",
+        botaolistar: true,
+        mostrarTitulo: true
       }
       break;
     case "detalhe":
@@ -30,7 +37,9 @@ function titlePros(routername?: string): {} {
         iconClass: 'fa fa-users',
         subtitulo: 'Detalhes do Evento',
         titulo: "Evento",
-        router: "evento"
+        router: "evento",
+        botaolistar: true,
+        mostrarTitulo: true
       }
       break;
     default:

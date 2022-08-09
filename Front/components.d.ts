@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CadastroEvento: typeof import('./src/components/eventos/CadastroEvento.vue')['default']
     DetalhesEvento: typeof import('./src/components/eventos/DetalhesEvento.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
@@ -27,8 +28,11 @@ declare module '@vue/runtime-core' {
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     EventoComponent: typeof import('./src/components/eventos/EventoComponent.vue')['default']
     EventoLista: typeof import('./src/components/eventos/EventoLista.vue')['default']
+    FormularioEvento: typeof import('./src/components/eventos/FormularioEvento.vue')['default']
     LoginComponent: typeof import('./src/components/user/login/LoginComponent.vue')['default']
+    LotesEvento: typeof import('./src/components/eventos/LotesEvento.vue')['default']
     PalestrantesComponent: typeof import('./src/components/palestrantes/PalestrantesComponent.vue')['default']
+    RegistrarUsuario: typeof import('./src/components/user/registrar/RegistrarUsuario.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UserComponent: typeof import('./src/components/user/UserComponent.vue')['default']
