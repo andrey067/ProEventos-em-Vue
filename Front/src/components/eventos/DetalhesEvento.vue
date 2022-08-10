@@ -1,10 +1,8 @@
 <template v-loading.fullscreen.lock="fullscreenLoading">
-    <FormularioEvento class="card-evento-view" />
-    <LotesEvento class="card-evento-view" />
+    <FormularioEvento class="card-evento-view" />    
 </template>
 
 <script setup lang="ts">
-import LotesEvento from './LotesEvento.vue';
 import FormularioEvento from './FormularioEvento.vue';
 
 </script>
@@ -18,4 +16,4 @@ import FormularioEvento from './FormularioEvento.vue';
     width: 80%;
     margin-left: 8%;
 }
-</style>
+</style>  

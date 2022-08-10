@@ -1,5 +1,5 @@
-<template>
-    <el-form ref="ruleFormCadastroEvento" label-width="auto">
+<template >
+    <el-form ref="ruleFormCadastroEvento" :model="propsLote" label-width="auto" :size="size">
         <div class="card rounded shadow-sm mt-3">
             <div class="p-3">
                 <div class="d-flex border-bottom">
@@ -24,29 +24,31 @@
                                 </legend>
                                 <div class="row">
                                     <div class="form-group col-md-4">
-                                        <label>Nome</label>
-                                        <input type="text" class="form-control" formControlName="nome"
-                                            placeholder="Lote">
+                                        <el-form-item label="Nome" prop="nome">
+                                            <el-input v-model="propsLote.nome" />
+                                        </el-form-item>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label>Quantidade</label>
-                                        <input type="text" class="form-control" placeholder="000">
+                                        <el-form-item label="Quantidade" prop="quantidade">
+                                            <el-input v-model="propsLote.quantidade" placeholder="000" />
+                                        </el-form-item>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label>Preço</label>
-                                        <input type="text" currencyMask class="form-control" placeholder="R$ 0,00">
+                                        <el-form-item label="Preco" prop="preco">
+                                            <el-input v-model="propsLote.preco" placeholder="000" />
+                                        </el-form-item>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label>Data Início</label>
-                                        <input type="datetime" class="form-control" bsDatepicker
-                                            value="{{lotes.get(i+'.dataInicio').value | date:'dd/MM/yyyy'}}"
-                                            placeholder="01/01/2019">
+                                        <el-form-item label="Data Inicio" prop="dataEvento" style="margin-left: 2%">
+                                            <el-date-picker format="DD/MM/YYYY" v-model="propsLote.dataInicio"
+                                                type="date" placeholder="Data do Inicio" style="width: 100%" />
+                                        </el-form-item>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label>Data Fim</label>
-                                        <input type="datetime" class="form-control" bsDatepicker
-                                            value="{{lotes.get(i+'.dataFim').value | date:'dd/MM/yyyy'}}"
-                                            placeholder="01/01/2019">
+                                        <el-form-item label="Data Fim" prop="dataEvento" style="margin-left: 2%">
+                                            <el-date-picker format="DD/MM/YYYY" v-model="propsLote.dataFim" type="date"
+                                                placeholder="Data do Fim" style="width: 100%" />
+                                        </el-form-item>
                                     </div>
                                 </div>
                             </fieldset>
@@ -73,7 +75,26 @@
 </template>
 
 <script setup lang="ts">
+import { onUpdated, ref } from "vue";
 
+const size = ref('large');
+
+const propsLote = defineProps({
+    id: Number,
+    nome: String,
+    preco: Number,
+    dataInicio: {
+        type: Date,
+        default: new Date()
+    },
+    dataFim: Date,
+    quantidade: Number,
+    eventoId: Number,
+})
+
+onUpdated(() => {
+    console.log("props", propsLote)
+})
 </script>
 
 <style>
